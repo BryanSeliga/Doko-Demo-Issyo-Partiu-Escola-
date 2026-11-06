@@ -1,0 +1,551 @@
+{"id": 19662, "pt": "Bem, todo mundo vai aprender com o Prof. {16}{1d}{16}, mas…"}
+{"id": 19663, "pt": "Ah, Prof. {16}{1d}{16}!"}
+{"id": 19664, "pt": "O Prof. {16}{1d}{16} é um humano digno de confiança, robô!"}
+{"id": 19665, "pt": "Bem, Prof. {16}{1d}{16}…"}
+{"id": 19666, "pt": "\"Prof. {16}{1d}{16}\" é meio formal demais…"}
+{"id": 19667, "pt": "Já que vimos tudo de {16}{1d}{16}, nossa amizade é íntima…"}
+{"id": 19668, "pt": "Como sinal de amizade,\nvamos chamar de \"{16}{1d}{16}\"!"}
+{"id": 19669, "pt": "Bem, {16}{1d}{16}!"}
+{"id": 19670, "pt": "O único robô é {16}{1d}{16}, robô…?"}
+{"id": 19671, "pt": "Na mente de {16}{1d}{16} não existe esse dado, robô…"}
+{"id": 19672, "pt": "{16}{1d}{16} trouxe {16}{1d}{16}, robô"}
+{"id": 19673, "pt": "Que coisa fazer com {16}{1d}{16}!"}
+{"id": 19674, "pt": "Afinal, {16}{1d}{16} é nosso professor, robô!"}
+{"id": 19675, "pt": "Bem, Prof. {16}{1d}{16}!"}
+{"id": 19676, "pt": "Quem não consegue comer {16}{14:0000}{16} também será expulso, miau"}
+{"id": 19677, "pt": "Com {16}{14:0000}{16}, eu como 3 tigelas de arroz fácil, croac"}
+{"id": 19678, "pt": "Começamos uma nova etapa como estudantes de {16}{1d}{16}, miau"}
+{"id": 19679, "pt": "Neste 1 ano, seguiremos as orientações do Prof. {16}{1d}{16}…"}
+{"id": 19680, "pt": "Sem me deixar vencer pela chuva, nem pelo vento, nem por {16}{14:0000}{16}…"}
+{"id": 19681, "pt": "Esse é o tipo de aluno que {16}{1d}{16} quer ser, miau"}
+{"id": 19682, "pt": "Seja {16}{14:0001}{16}, seja {16}{14:0002}{16}…"}
+{"id": 19683, "pt": "Esforçar-se com {16}{14:0003}{16} e com {16}{14:0004}{16}…"}
+{"id": 19684, "pt": "Estou cheio de dúvidas, como se vou conseguir fazer {16}{14:0000}{16}, robô"}
+{"id": 19685, "pt": "Mesmo assim, sob as orientações do Prof. {16}{1d}{16}…"}
+{"id": 19686, "pt": "Com novos sentimentos no coração, passei pelo portão de {16}{1d}{16}, pyon"}
+{"id": 19687, "pt": "Mas mesmo nessas horas, sob as orientações do Prof. {16}{1d}{16}…"}
+{"id": 19688, "pt": "Nos estudos, nos esportes e também em {16}{14:0000}{16}…"}
+{"id": 19689, "pt": "Tenho expectativas e metas para a vida em {16}{1d}{16}, au"}
+{"id": 19690, "pt": "Sem esquecer de {16}{14:0000}{16}, vou me esforçar…"}
+{"id": 19691, "pt": "Subi no ringue da vida em {16}{1d}{16}, sô"}
+{"id": 19692, "pt": "Aprendendo muita coisa e fortalecendo {16}{14:0000}{16}…"}
+{"id": 19693, "pt": "Como esperado de um aluno de {16}{1d}{16}!"}
+{"id": 19694, "pt": "Aluno representante\nO gato {16}{1d}{16}, miau"}
+{"id": 19695, "pt": "Aluno representante\nO robô {16}{1d}{16}, robô"}
+{"id": 19696, "pt": "Aluno representante\nA coelha {16}{1d}{16}, pyon"}
+{"id": 19697, "pt": "Aluno representante\nO cachorro {16}{1d}{16}, au"}
+{"id": 19698, "pt": "Aluno representante\nO sapo {16}{1d}{16}, croac"}
+{"id": 19699, "pt": "Boas-vindas a {16}{1d}{16}"}
+{"id": 175, "pt": "Outros"}
+{"id": 176, "pt": "Faz suspirar"}
+{"id": 177, "pt": "homem"}
+{"id": 178, "pt": "mulher"}
+{"id": 179, "pt": "Uma pessoa"}
+{"id": 180, "pt": "Ídolo"}
+{"id": 181, "pt": "Cantor(a)"}
+{"id": 182, "pt": "Comediante"}
+{"id": 183, "pt": "Ator/Atriz"}
+{"id": 184, "pt": "Atleta"}
+{"id": 185, "pt": "Personagem"}
+{"id": 186, "pt": "Popular"}
+{"id": 187, "pt": "Sempre na TV"}
+{"id": 188, "pt": "Já encontrei"}
+{"id": 189, "pt": "Famoso antigo"}
+{"id": 190, "pt": "Meio picante"}
+{"id": 191, "pt": "Fofo(a)"}
+{"id": 192, "pt": "Adulto"}
+{"id": 193, "pt": "Estiloso"}
+{"id": 194, "pt": "Não é outro"}
+{"id": 195, "pt": "Não faz suspirar"}
+{"id": 196, "pt": "Não é homem"}
+{"id": 197, "pt": "Não é mulher"}
+{"id": 198, "pt": "Várias pessoas"}
+{"id": 199, "pt": "Não é ídolo"}
+{"id": 200, "pt": "Não é cantor(a)"}
+{"id": 201, "pt": "Não é humorista"}
+{"id": 202, "pt": "Não é ator/atriz"}
+{"id": 203, "pt": "Não é atleta"}
+{"id": 204, "pt": "Não é personagem"}
+{"id": 205, "pt": "Impopular"}
+{"id": 206, "pt": "Raro na TV"}
+{"id": 207, "pt": "Nunca encontrei"}
+{"id": 208, "pt": "Fama recente"}
+{"id": 209, "pt": "Nada picante"}
+{"id": 210, "pt": "Não é fofo(a)"}
+{"id": 211, "pt": "Criança"}
+{"id": 212, "pt": "Sem estilo"}
+{"id": 213, "pt": "Forte"}
+{"id": 214, "pt": "Lado da justiça"}
+{"id": 215, "pt": "Voa pelo céu"}
+{"id": 216, "pt": "Pode se fundir"}
+{"id": 217, "pt": "Robô gigante"}
+{"id": 218, "pt": "Vai ao espaço"}
+{"id": 219, "pt": "Fraco"}
+{"id": 220, "pt": "Não é do bem"}
+{"id": 221, "pt": "Não voa"}
+{"id": 222, "pt": "Não se funde"}
+{"id": 223, "pt": "Não é gigante"}
+{"id": 224, "pt": "Fora do espaço"}
+{"id": 227, "pt": "Namorado(a)"}
+{"id": 230, "pt": "Boa pessoa"}
+{"id": 231, "pt": "Divertido"}
+{"id": 232, "pt": "Pessoa gentil"}
+{"id": 233, "pt": "Pessoa ocupada"}
+{"id": 234, "pt": "VIP"}
+{"id": 235, "pt": "Não é família"}
+{"id": 236, "pt": "Não é amigo(a)"}
+{"id": 237, "pt": "Não é namoro"}
+{"id": 238, "pt": "Não é atlético"}
+{"id": 239, "pt": "Pouco esperto"}
+{"id": 240, "pt": "Pessoa má"}
+{"id": 241, "pt": "Sem graça"}
+{"id": 242, "pt": "Pouco gentil"}
+{"id": 243, "pt": "Nada ocupado"}
+{"id": 244, "pt": "Sem importância"}
+{"id": 245, "pt": "Fica por perto"}
+{"id": 246, "pt": "Trabalho"}
+{"id": 247, "pt": "Útil"}
+{"id": 248, "pt": "Cansativo"}
+{"id": 249, "pt": "Jeito adulto"}
+{"id": 250, "pt": "Difícil"}
+{"id": 251, "pt": "Perigoso"}
+{"id": 252, "pt": "Raro"}
+{"id": 253, "pt": "Corrido"}
+{"id": 254, "pt": "Fica longe"}
+{"id": 255, "pt": "Não é trabalho"}
+{"id": 256, "pt": "Inútil"}
+{"id": 257, "pt": "Não cansa"}
+{"id": 258, "pt": "Jeito infantil"}
+{"id": 259, "pt": "Fácil"}
+{"id": 260, "pt": "Não é perigoso"}
+{"id": 261, "pt": "Comum"}
+{"id": 262, "pt": "Tem que fazer"}
+{"id": 263, "pt": "Não pode fazer"}
+{"id": 264, "pt": "Esporte"}
+{"id": 265, "pt": "Ligado ao amor"}
+{"id": 266, "pt": "Técnica"}
+{"id": 267, "pt": "Em grupo"}
+{"id": 268, "pt": "Custa dinheiro"}
+{"id": 269, "pt": "Criança pode"}
+{"id": 270, "pt": "Brincadeira"}
+{"id": 271, "pt": "Aprendi na aula"}
+{"id": 272, "pt": "Nunca enjoa"}
+{"id": 273, "pt": "Já fiz"}
+{"id": 274, "pt": "Não precisa"}
+{"id": 275, "pt": "Pode fazer"}
+{"id": 276, "pt": "Não é esporte"}
+{"id": 277, "pt": "Nada a ver c/ amor"}
+{"id": 278, "pt": "Não é técnica"}
+{"id": 279, "pt": "Não é em grupo"}
+{"id": 280, "pt": "Não custa nada"}
+{"id": 281, "pt": "Criança não pode"}
+{"id": 282, "pt": "Não é brincar"}
+{"id": 283, "pt": "Não é da escola"}
+{"id": 284, "pt": "Enjoa logo"}
+{"id": 285, "pt": "Nunca fiz"}
+{"id": 286, "pt": "Prefiro receber"}
+{"id": 287, "pt": "Não custa nada"}
+{"id": 288, "pt": "Enjoa logo"}
+{"id": 289, "pt": "Prefiro fazer"}
+{"id": 290, "pt": "Loja"}
+{"id": 291, "pt": "Nome de lugar"}
+{"id": 292, "pt": "Nome de firma"}
+{"id": 293, "pt": "Nome de grupo"}
+{"id": 294, "pt": "Seguro"}
+{"id": 295, "pt": "Cidade grande"}
+{"id": 296, "pt": "Perto"}
+{"id": 297, "pt": "Grande"}
+{"id": 298, "pt": "Dá pra ir a pé"}
+{"id": 299, "pt": "Dá pra brincar"}
+{"id": 300, "pt": "Quero voltar"}
+{"id": 301, "pt": "Exterior"}
+{"id": 302, "pt": "Junta muita gente"}
+{"id": 303, "pt": "Precisa de grana"}
+{"id": 304, "pt": "Não é loja"}
+{"id": 305, "pt": "Não é lugar"}
+{"id": 306, "pt": "Não é empresa"}
+{"id": 307, "pt": "Não é grupo"}
+{"id": 308, "pt": "Inseguro"}
+{"id": 309, "pt": "Interior"}
+{"id": 310, "pt": "Longe"}
+{"id": 311, "pt": "Pequeno"}
+{"id": 312, "pt": "Não vai a pé"}
+{"id": 313, "pt": "Sem diversão"}
+{"id": 314, "pt": "Não quero ir muito"}
+{"id": 315, "pt": "No Japão"}
+{"id": 316, "pt": "Pouca gente"}
+{"id": 317, "pt": "Gostoso"}
+{"id": 318, "pt": "Faz bem à saúde"}
+{"id": 319, "pt": "Sabor adulto"}
+{"id": 320, "pt": "Melhor fora"}
+{"id": 321, "pt": "Sei fazer"}
+{"id": 322, "pt": "Doce"}
+{"id": 323, "pt": "Melhor quente"}
+{"id": 324, "pt": "Tem no mercado"}
+{"id": 325, "pt": "Caro"}
+{"id": 326, "pt": "Picante"}
+{"id": 327, "pt": "Já comi na rua"}
+{"id": 328, "pt": "Prato"}
+{"id": 329, "pt": "Não é gostoso"}
+{"id": 330, "pt": "Faz mal à saúde"}
+{"id": 331, "pt": "Sabor de criança"}
+{"id": 332, "pt": "Melhor em casa"}
+{"id": 333, "pt": "Não sei fazer"}
+{"id": 334, "pt": "Não é doce"}
+{"id": 335, "pt": "Melhor gelado"}
+{"id": 336, "pt": "Não tem no mercado"}
+{"id": 337, "pt": "Barato"}
+{"id": 338, "pt": "Não é picante"}
+{"id": 339, "pt": "Nunca comi na rua"}
+{"id": 340, "pt": "Não é prato"}
+{"id": 341, "pt": "Melhor beber fora"}
+{"id": 342, "pt": "Criança pode beber"}
+{"id": 343, "pt": "Beber em casa"}
+{"id": 344, "pt": "Criança não pode"}
+{"id": 345, "pt": "Animal"}
+{"id": 346, "pt": "Comestível"}
+{"id": 347, "pt": "Morde"}
+{"id": 348, "pt": "Grande"}
+{"id": 349, "pt": "Vive muito"}
+{"id": 350, "pt": "Pode criar"}
+{"id": 351, "pt": "Não é animal"}
+{"id": 352, "pt": "Não se come"}
+{"id": 353, "pt": "Não morde"}
+{"id": 354, "pt": "Não é grande"}
+{"id": 355, "pt": "Vive pouco"}
+{"id": 356, "pt": "Não pode criar"}
+{"id": 357, "pt": "Dá energia"}
+{"id": 358, "pt": "Música japonesa"}
+{"id": 359, "pt": "Famosa"}
+{"id": 360, "pt": "Dá pra cantar"}
+{"id": 361, "pt": "Não dá energia"}
+{"id": 362, "pt": "Não é japonesa"}
+{"id": 363, "pt": "Não é famosa"}
+{"id": 364, "pt": "Não se canta"}
+{"id": 365, "pt": "Filme"}
+{"id": 366, "pt": "TV"}
+{"id": 367, "pt": "Internet"}
+{"id": 368, "pt": "Anime"}
+{"id": 369, "pt": "Série"}
+{"id": 370, "pt": "Variedades"}
+{"id": 371, "pt": "Faz chorar"}
+{"id": 372, "pt": "Novo"}
+{"id": 373, "pt": "Ensina algo"}
+{"id": 374, "pt": "Picante"}
+{"id": 375, "pt": "Não é filme"}
+{"id": 376, "pt": "Não é TV"}
+{"id": 377, "pt": "Não é internet"}
+{"id": 378, "pt": "Não é anime"}
+{"id": 379, "pt": "Não é série"}
+{"id": 380, "pt": "Não é variedades"}
+{"id": 381, "pt": "Não faz chorar"}
+{"id": 382, "pt": "Não é novo"}
+{"id": 383, "pt": "Não ensina nada"}
+{"id": 384, "pt": "Mangá"}
+{"id": 385, "pt": "Revista"}
+{"id": 386, "pt": "Ficção"}
+{"id": 387, "pt": "Estudo"}
+{"id": 388, "pt": "Para adultos"}
+{"id": 389, "pt": "Para mulheres"}
+{"id": 390, "pt": "Não é mangá"}
+{"id": 391, "pt": "Não é revista"}
+{"id": 392, "pt": "Não é ficção"}
+{"id": 393, "pt": "Não é estudo"}
+{"id": 394, "pt": "Para crianças"}
+{"id": 395, "pt": "Para homens"}
+{"id": 396, "pt": "Se veste"}
+{"id": 397, "pt": "Usa eletricidade"}
+{"id": 398, "pt": "Quebra fácil"}
+{"id": 399, "pt": "Muitos"}
+{"id": 400, "pt": "Pesado"}
+{"id": 401, "pt": "Vende online"}
+{"id": 402, "pt": "Está na moda"}
+{"id": 403, "pt": "Chique"}
+{"id": 404, "pt": "Importado"}
+{"id": 405, "pt": "Levo sempre"}
+{"id": 406, "pt": "Melhor novo"}
+{"id": 407, "pt": "Posso emprestar"}
+{"id": 408, "pt": "Uso muito"}
+{"id": 409, "pt": "Importante"}
+{"id": 410, "pt": "Não se veste"}
+{"id": 411, "pt": "Sem eletricidade"}
+{"id": 412, "pt": "Difícil quebrar"}
+{"id": 413, "pt": "Basta um"}
+{"id": 414, "pt": "Leve"}
+{"id": 415, "pt": "Não vende online"}
+{"id": 416, "pt": "Fora de moda"}
+{"id": 417, "pt": "Não é chique"}
+{"id": 418, "pt": "Feito no Japão"}
+{"id": 419, "pt": "Não levo sempre"}
+{"id": 420, "pt": "Melhor velho"}
+{"id": 421, "pt": "Não emprestar"}
+{"id": 422, "pt": "Uso pouco"}
+{"id": 423, "pt": "Sem importância"}
+{"id": 424, "pt": "Prático"}
+{"id": 425, "pt": "Rápido"}
+{"id": 426, "pt": "Dá pra dirigir"}
+{"id": 427, "pt": "Cabe bastante"}
+{"id": 428, "pt": "Lotado"}
+{"id": 429, "pt": "Não é prático"}
+{"id": 430, "pt": "Lento"}
+{"id": 431, "pt": "Não dá pra dirigir"}
+{"id": 432, "pt": "Cabe pouco"}
+{"id": 433, "pt": "Vazio"}
+{"id": 434, "pt": "Piada"}
+{"id": 435, "pt": "Ditado"}
+{"id": 436, "pt": "Frase famosa"}
+{"id": 437, "pt": "Ao se encontrar"}
+{"id": 438, "pt": "Ao se despedir"}
+{"id": 439, "pt": "Não é piada"}
+{"id": 440, "pt": "Não é ditado"}
+{"id": 441, "pt": "Não é frase"}
+{"id": 442, "pt": "Não é saudação"}
+{"id": 443, "pt": "Dói se bater"}
+{"id": 444, "pt": "Melhor grande"}
+{"id": 445, "pt": "Cansa fácil"}
+{"id": 446, "pt": "Melhor fofo"}
+{"id": 447, "pt": "Melhor forte"}
+{"id": 448, "pt": "Não mostrar"}
+{"id": 449, "pt": "Engorda fácil"}
+{"id": 450, "pt": "Melhor bonito"}
+{"id": 451, "pt": "Melhor sexy"}
+{"id": 452, "pt": "Não dói"}
+{"id": 453, "pt": "Melhor pequeno"}
+{"id": 454, "pt": "Não precisa ser fofo"}
+{"id": 455, "pt": "Não precisa ser forte"}
+{"id": 456, "pt": "Pode mostrar"}
+{"id": 457, "pt": "Engorda pouco"}
+{"id": 458, "pt": "Não precisa ser belo"}
+{"id": 459, "pt": "Não precisa ser sexy"}
+{"id": 460, "pt": "Duro"}
+{"id": 461, "pt": "Dói"}
+{"id": 462, "pt": "Precisa injeção"}
+{"id": 463, "pt": "Cura rápido"}
+{"id": 464, "pt": "Precisa internar"}
+{"id": 465, "pt": "Precisa ir ao médico"}
+{"id": 466, "pt": "Não é duro"}
+{"id": 467, "pt": "Sem injeção"}
+{"id": 468, "pt": "Demora a curar"}
+{"id": 469, "pt": "Sem internação"}
+{"id": 470, "pt": "Não precisa ir ao médico"}
+{"id": 6777, "pt": "Urso"}
+{"id": 471, "pt": "Macaco"}
+{"id": 472, "pt": "Palavra"}
+{"id": 473, "pt": "Música"}
+{"id": 474, "pt": "n"}
+{"id": 475, "pt": "Apertar"}
+{"id": 476, "pt": "Salvando…"}
+{"id": 477, "pt": "Não foi possível salvar"}
+{"id": 478, "pt": "Salvo!"}
+{"id": 479, "pt": "Prof."}
+{"id": 484, "pt": "Que pena! Nada ganho"}
+{"id": 485, "pt": "Desconhecida"}
+{"id": 486, "pt": "Substantivo"}
+{"id": 487, "pt": "Subst. de ação"}
+{"id": 488, "pt": "Advérbio"}
+{"id": 489, "pt": "Adj. adnominal"}
+{"id": 490, "pt": "Interjeição"}
+{"id": 491, "pt": "Conjunção"}
+{"id": 492, "pt": "Verbo"}
+{"id": 493, "pt": "Adjetivo"}
+{"id": 494, "pt": "Adj. nominal"}
+{"id": 495, "pt": "Pseudo"}
+{"id": 496, "pt": "Kanji único"}
+{"id": 497, "pt": "Partícula"}
+{"id": 498, "pt": "Símbolo"}
+{"id": 499, "pt": "Abre aspas"}
+{"id": 500, "pt": "Fecha aspas"}
+{"id": 501, "pt": "Vírgula"}
+{"id": 502, "pt": "Ponto final"}
+{"id": 503, "pt": "Numeral"}
+{"id": 504, "pt": "Entre aspas"}
+{"id": 505, "pt": "Conectivo"}
+{"id": 506, "pt": "Letras"}
+{"id": 507, "pt": "Grande"}
+{"id": 508, "pt": "Médio"}
+{"id": 509, "pt": "Pequeno"}
+{"id": 510, "pt": "Início"}
+{"id": 511, "pt": "Alto"}
+{"id": 512, "pt": "Baixo"}
+{"id": 519, "pt": "hari (esticar)"}
+{"id": 520, "pt": "hari (colar)"}
+{"id": 521, "pt": "taxa"}
+{"id": 528, "pt": "prêmio"}
+{"id": 529, "pt": "proteção"}
+{"id": 530, "pt": "sentença"}
+{"id": 531, "pt": "representante"}
+{"id": 532, "pt": "contra"}
+{"id": 533, "pt": "variação"}
+{"id": 534, "pt": "ciência"}
+{"id": 535, "pt": "caderno"}
+{"id": 536, "pt": "open"}
+{"id": 537, "pt": "relatório"}
+{"id": 538, "pt": "espião"}
+{"id": 539, "pt": "e-mail"}
+{"id": 540, "pt": "ponto"}
+{"id": 541, "pt": "drive"}
+{"id": 542, "pt": "net"}
+{"id": 543, "pt": "rush"}
+{"id": 544, "pt": "software"}
+{"id": 545, "pt": "completo"}
+{"id": 554, "pt": "ra"}
+{"id": 555, "pt": "na"}
+{"id": 556, "pt": "~"}
+{"id": 557, "pt": "su"}
+{"id": 558, "pt": "poucos filhos"}
+{"id": 559, "pt": "jogo"}
+{"id": 560, "pt": "tsu"}
+{"id": 561, "pt": "sa"}
+{"id": 562, "pt": "me"}
+{"id": 563, "pt": "ha"}
+{"id": 564, "pt": "fazer"}
+{"id": 565, "pt": "fazer"}
+{"id": 566, "pt": "vu"}
+{"id": 567, "pt": "bu"}
+{"id": 568, "pt": "Ding dong"}
+{"id": 569, "pt": "miau"}
+{"id": 570, "pt": "robô"}
+{"id": 571, "pt": "pyon"}
+{"id": 572, "pt": "au"}
+{"id": 573, "pt": "croac"}
+{"id": 574, "pt": "miau"}
+{"id": 575, "pt": "usa"}
+{"id": 576, "pt": "sô"}
+{"id": 577, "pt": "eu"}
+{"id": 578, "pt": "Ué…"}
+{"id": 579, "pt": "Ora…"}
+{"id": 580, "pt": "Ai, ai…"}
+{"id": 581, "pt": "Nossa…"}
+{"id": 582, "pt": "Hmm…"}
+{"id": 583, "pt": "Ahem"}
+{"id": 584, "pt": "Aham, aham"}
+{"id": 585, "pt": "Hihi"}
+{"id": 586, "pt": "Isso!"}
+{"id": 587, "pt": "Mandou bem"}
+{"id": 588, "pt": "Burburinho…\nBurburinho…"}
+{"id": 589, "pt": "?"}
+{"id": 590, "pt": "!"}
+{"id": 591, "pt": "~"}
+{"id": 592, "pt": "Sim~!"}
+{"id": 593, "pt": "Sim"}
+{"id": 594, "pt": "Siim~"}
+{"id": 595, "pt": "Sim!"}
+{"id": 596, "pt": "Sim, miau!"}
+{"id": 597, "pt": "Beleza!"}
+{"id": 598, "pt": "Siiim~"}
+{"id": 599, "pt": "E aí!"}
+{"id": 600, "pt": "Entendido, robô"}
+{"id": 601, "pt": "Upa\nUpa"}
+{"id": 602, "pt": "Hmm hmm"}
+{"id": 603, "pt": "Hum hum♪"}
+{"id": 604, "pt": "Croacroá~"}
+{"id": 605, "pt": "Revista de moda"}
+{"id": 606, "pt": "Taro"}
+{"id": 607, "pt": "França"}
+{"id": 608, "pt": "Merci beaucoup"}
+{"id": 609, "pt": "Itália"}
+{"id": 610, "pt": "Grazie"}
+{"id": 611, "pt": "Alemanha"}
+{"id": 612, "pt": "Danke schoen"}
+{"id": 613, "pt": "Coreia"}
+{"id": 614, "pt": "Kamsahamnida"}
+{"id": 615, "pt": "Rússia"}
+{"id": 616, "pt": "Spasibo"}
+{"id": 617, "pt": "Espanha"}
+{"id": 618, "pt": "Gracias"}
+{"id": 619, "pt": "Arábia"}
+{"id": 620, "pt": "Shukran"}
+{"id": 621, "pt": "Tailândia"}
+{"id": 622, "pt": "Khop khun"}
+{"id": 623, "pt": "Hungria"}
+{"id": 624, "pt": "Koszonom"}
+{"id": 625, "pt": "China"}
+{"id": 626, "pt": "Xie xie"}
+{"id": 627, "pt": "Bulgária"}
+{"id": 628, "pt": "Blagodarya"}
+{"id": 629, "pt": "Grécia"}
+{"id": 630, "pt": "Efharisto"}
+{"id": 631, "pt": "Ah!"}
+{"id": 632, "pt": "Esquece"}
+{"id": 633, "pt": "Nome de pessoa"}
+{"id": 634, "pt": "Famoso(a)"}
+{"id": 635, "pt": "Profissão"}
+{"id": 636, "pt": "Jeito da pessoa"}
+{"id": 637, "pt": "O que se faz"}
+{"id": 638, "pt": "Aonde ir"}
+{"id": 639, "pt": "Comida"}
+{"id": 640, "pt": "Bebida"}
+{"id": 641, "pt": "Seres vivos"}
+{"id": 642, "pt": "O que se lê"}
+{"id": 643, "pt": "O que se vê"}
+{"id": 644, "pt": "O que se usa"}
+{"id": 645, "pt": "O que se veste"}
+{"id": 646, "pt": "Parte do corpo"}
+{"id": 647, "pt": "Veículo"}
+{"id": 648, "pt": "Robô"}
+{"id": 649, "pt": "Doença"}
+{"id": 650, "pt": "Nome de pessoa"}
+{"id": 651, "pt": "Fazer e receber"}
+{"id": 652, "pt": "Coisa misteriosa"}
+{"id": 653, "pt": "Entendi, miau…"}
+{"id": 654, "pt": "Ah, tá…"}
+{"id": 655, "pt": "Uau"}
+{"id": 656, "pt": "Hmm…"}
+{"id": 657, "pt": "Entendi~"}
+{"id": 658, "pt": "Sacei~"}
+{"id": 659, "pt": "Hum"}
+{"id": 660, "pt": "Nossa~"}
+{"id": 661, "pt": "Croac~"}
+{"id": 662, "pt": "Oh"}
+{"id": 663, "pt": "Hehe"}
+{"id": 664, "pt": "Eba\nMe elogiaram, miau"}
+{"id": 665, "pt": "Eba\nAcertei, miau"}
+{"id": 666, "pt": "Miau!\nFui bem? Fui bem?"}
+{"id": 667, "pt": "Cafuné"}
+{"id": 668, "pt": "Peteleco"}
+{"id": 669, "pt": "Miau!?"}
+{"id": 670, "pt": "Moleza, robô"}
+{"id": 671, "pt": "Como previsto"}
+{"id": 672, "pt": "Beleza, acertei, robô"}
+{"id": 673, "pt": "Claro, robô"}
+{"id": 674, "pt": "Acertei\nAté eu me surpreendi"}
+{"id": 675, "pt": "Moleza"}
+{"id": 676, "pt": "Beleza!"}
+{"id": 677, "pt": "Isso aí!"}
+{"id": 678, "pt": "Ora?\nAcertei?"}
+{"id": 679, "pt": "Deixa comigo~"}
+{"id": 680, "pt": "Isso é fácil, au~"}
+{"id": 681, "pt": "Li no chute…\nMas acertei, croac~"}
+{"id": 682, "pt": "Croac?\nAcertei, sô!"}
+{"id": 683, "pt": "Consegui ler, croac!\nConsegui ler, croac!"}
+{"id": 684, "pt": "Voltar"}
+{"id": 685, "pt": "Entendi, entendi"}
+{"id": 686, "pt": "Hã, hã"}
+{"id": 687, "pt": "Hmm…"}
+{"id": 688, "pt": "Já que estamos aqui, me ensina uma palavra nova, uki"}
+{"id": 689, "pt": "Já que estamos aqui, me ensine uma palavra nova"}
+{"id": 690, "pt": "Já que estamos aqui, uma palavra nova, por favor"}
+{"id": 691, "pt": "Já que estamos aqui, quero saber uma palavra nova"}
+{"id": 692, "pt": "Já que estamos aqui, me ensina uma palavra nova~"}
+{"id": 693, "pt": "Me ensina outra, uki"}
+{"id": 694, "pt": "Me ensine outra"}
+{"id": 695, "pt": "Outra, por favor"}
+{"id": 696, "pt": "Me ensina outra"}
+{"id": 697, "pt": "Me ensina outra~"}
+{"id": 698, "pt": "Gosto"}
+{"id": 699, "pt": "Não gosto"}
+{"id": 700, "pt": "Homem e mulher"}
+{"id": 701, "pt": "Os dois"}
+{"id": 702, "pt": "Nome de país"}
+{"id": 703, "pt": "Nome de loja"}
+{"id": 704, "pt": "Outro lugar"}
+{"id": 705, "pt": "Fazer e receber"}
+{"id": 706, "pt": "Palavra de amor"}
+{"id": 707, "pt": "O que se ouve"}
+{"id": 708, "pt": "Programa de TV"}
+{"id": 709, "pt": "Nome de pessoa / Amigos, conhecidos, família"}
+{"id": 710, "pt": "Famoso(a) / Artistas, famosos, personagens"}
+{"id": 711, "pt": "Profissão / Profissões e trabalhos"}
+{"id": 712, "pt": "Jeito da pessoa / Palavras sobre aparência e jeito"}
+{"id": 713, "pt": "O que se faz / Fazer algo, ser alvo de algo"}
+{"id": 714, "pt": "Aonde ir / Lugares, países, grupos, empresas, eventos"}

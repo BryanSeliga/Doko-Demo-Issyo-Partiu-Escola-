@@ -1,0 +1,17 @@
+# Nada do jogo original pode entrar no repositorio
+work/
+*.iso
+*.ISO
+*.cso
+*.BPM
+*.BP
+*.KSC
+*.DIC
+*.XFT
+*.GIM
+*.AT3
+*.PMF
+BOOT.BIN
+EBOOT.BIN
+__pycache__/
+*.pyc
