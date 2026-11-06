@@ -27,6 +27,10 @@ FASES = {
     "take": ["TAKE"],
     "masa": ["MASA", "MASATK", "MASAPD", "MASAST", "MASASP", "MASAIP", "MASAIQ"],
     "miya": ["MIYA", "MIYASP"],
+    # eventos e clubes: nome com .KSC e o script exato, sem .KSC e prefixo de grupo numerado
+    "eventos": ["MASABUS.KSC", "SOTSUGYO_ARRIVE.KSC", "SOTSUGYO.KSC", "NISHISP", "ASCHOOL", "OSCHOOL", "SKETCH.KSC",
+                "SYUGYO", "SARU_INTRO.KSC", "SARU", "_CLUB_JAPAN.KSC", "_CLUB_MASAMI_IQ", "_CLUB_NANKAIKANJI.KSC",
+                "_CLUB_SHIRITORI.KSC", "ADHOC.KSC", "INPSP.KSC"],
 }
 
 
@@ -114,7 +118,7 @@ def gerar(iso_path, fase):
                 out.append("")
         return out
 
-    nomes = FASES[fase] if FASES[fase][0].endswith(".KSC") else grupo(iso, FASES[fase])
+    nomes = [n for e in FASES[fase] for n in ([e] if e.endswith(".KSC") else grupo(iso, [e]))]
     for name in nomes:
         inline, pool = extract(iso.bp(*files[name]))
         tin, tpool = texts_of(inline), texts_of(pool)
