@@ -23,7 +23,21 @@ ROOT = os.path.join(HERE, "..")
 FASES = {
     "inicio": ["NYUUGAKU.KSC", "NYUUGAKU_ARRIVE.KSC", "NYUUGAKU_D.KSC", "KOUCHOU1.KSC", "MAEFURI.KSC", "MAIN.KSC",
                "SHARE.KSC"],
+    # aulas: scripts em ordem numerica dentro de cada grupo (ver grupo())
+    "take": ["TAKE"],
+    "masa": ["MASA", "MASATK", "MASAPD", "MASAST", "MASASP", "MASAIP", "MASAIQ"],
+    "miya": ["MIYA", "MIYASP"],
 }
+
+
+def grupo(iso, prefixos):
+    """Scripts KSC de cada prefixo (TAKE1, TAKE2, ...), em ordem numerica."""
+    nomes = [n for n, _, _ in ksc_files(iso)]
+    out = []
+    for pre in prefixos:
+        achados = [n for n in nomes if re.fullmatch(re.escape(pre) + r"\d+\.KSC", n)]
+        out += sorted(achados, key=lambda n: int(re.search(r"(\d+)\.KSC$", n).group(1)))
+    return out
 LOTE_CHARS = 4000
 MAX_BYTES = 600
 SHORT_POOL = 8      # pool japones com ate 8 caracteres: opcao, nome ou titulo em caixa que nao quebra
@@ -100,7 +114,8 @@ def gerar(iso_path, fase):
                 out.append("")
         return out
 
-    for name in FASES[fase]:
+    nomes = FASES[fase] if FASES[fase][0].endswith(".KSC") else grupo(iso, FASES[fase])
+    for name in nomes:
         inline, pool = extract(iso.bp(*files[name]))
         tin, tpool = texts_of(inline), texts_of(pool)
         pairs = vocab_pairs(tpool)

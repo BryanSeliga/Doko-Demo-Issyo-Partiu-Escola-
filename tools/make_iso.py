@@ -13,8 +13,9 @@ import sys
 from build_iso import build
 from extract_all import collect
 from gtext import TOKEN, to_bytes, to_text
-from iso_common import Iso, ksc_files
+from iso_common import Iso, bpm_files, inner_files, ksc_files
 from ksc import extract, rebuild
+import title_logo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 # O op 4b copia a string do pool com strcpy para o buffer de fala do VM (+0x78, ate +0x477): mais que isso
@@ -75,7 +76,11 @@ def main(src, dst):
             top[name] = new
             total += n
     print(f"{len(pt)} traducoes; {total} trocas em {len(top)} scripts")
-    print("DATA.BP ->", build(src, dst, top=top))
+    # tela-titulo com o logotipo "Partiu Escola!" (as texturas crescem: o TITLE.BPM e remontado no fim)
+    bpms = {n: (o, s) for n, o, s in bpm_files(iso)}
+    tfiles = {n: (o, s) for n, o, s in inner_files(iso, bpms["TITLE.BPM"][0])}
+    title = title_logo.build(iso.bp(*tfiles[title_logo.LOGO[1]]), iso.bp(*tfiles[title_logo.BG[1]]))
+    print("DATA.BP ->", build(src, dst, top=top, bpm={"TITLE.BPM": title}))
 
 
 if __name__ == "__main__":
