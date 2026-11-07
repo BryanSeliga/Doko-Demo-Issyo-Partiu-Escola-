@@ -34,6 +34,8 @@ FASES = {
                 "_CLUB_SHIRITORI.KSC", "ADHOC.KSC", "INPSP.KSC"],
     # dicionario do Shiritori em equipes: so as palavras; as leituras em kana ficam no original (ksc.reading_slots)
     "shiritori": ["_SHIRITORI_TEAM"],
+    # aulas em que quem joga digita palavras (os pares palavra|leitura vao para o vocabulario)
+    "inp": ["INP"],
 }
 
 
