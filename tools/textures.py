@@ -203,13 +203,35 @@ def translate(data, spec):
     return write_gim(data, im)
 
 
+def load_specs():
+    """SPECS daqui mais as entradas de cada textures_*.py (uma por grupo de cenarios)."""
+    import importlib
+    import os
+    import pkgutil
+    specs = dict(SPECS)
+    here = os.path.dirname(os.path.abspath(__file__))
+    for mod in pkgutil.iter_modules([here]):
+        if mod.name.startswith("textures_"):
+            specs.update(importlib.import_module(mod.name).SPECS)
+    return specs
+
+
 def build_all(iso, bpms, specs=None):
-    """{(pacote, nome_interno): bytes}: toda textura com o nome de uma entrada, em qualquer pacote."""
-    specs = specs or SPECS
+    """{(pacote, nome_interno): bytes}: toda textura com o nome de uma entrada, em qualquer pacote. A chave pode
+    ser "NOME" ou "PACOTE.BPM:NOME" (so naquele pacote); "size": (w, h) na entrada restringe ao tamanho certo
+    (o mesmo nome as vezes tem versoes de tamanhos diferentes em pacotes diferentes)."""
+    specs = specs or load_specs()
     out = {}
     for pack, (off, _) in bpms.items():
         for n, o, s in inner_files(iso, off):
+            if not n.endswith(".GIM"):
+                continue
             key = n.replace(chr(92), "/").split("/")[-1][:-4]
-            if n.endswith(".GIM") and key in specs:
-                out[(pack, n)] = translate(iso.bp(o, s), specs[key])
+            spec = specs.get(f"{pack}:{key}") or specs.get(key)
+            if spec is None:
+                continue
+            data = iso.bp(o, s)
+            if "size" in spec and tuple(to_rgba(data)[:2]) != tuple(spec["size"]):
+                continue
+            out[(pack, n)] = translate(data, spec)
     return out
