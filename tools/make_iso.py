@@ -13,8 +13,9 @@ import sys
 from build_iso import build
 from extract_all import collect
 from gtext import TOKEN, to_bytes, to_text
-from iso_common import Iso, bpm_files, inner_files, ksc_files
+from iso_common import BOOT_LBA, BOOT_SIZE, Iso, bpm_files, inner_files, ksc_files
 from ksc import extract, reading_slots, rebuild
+import boot_text
 import title_logo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -89,7 +90,8 @@ def main(src, dst):
     bpms = {n: (o, s) for n, o, s in bpm_files(iso)}
     tfiles = {n: (o, s) for n, o, s in inner_files(iso, bpms["TITLE.BPM"][0])}
     title = title_logo.build(iso.bp(*tfiles[title_logo.LOGO[1]]), iso.bp(*tfiles[title_logo.BG[1]]))
-    print("DATA.BP ->", build(src, dst, top=top, bpm={"TITLE.BPM": title}))
+    boot = boot_text.patch_boot(iso.read(BOOT_LBA, BOOT_SIZE))  # menus, botoes e janelas do sistema
+    print("DATA.BP ->", build(src, dst, top=top, bpm={"TITLE.BPM": title}, boot=boot))
 
 
 if __name__ == "__main__":
