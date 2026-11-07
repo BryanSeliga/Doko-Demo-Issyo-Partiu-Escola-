@@ -32,9 +32,25 @@ def extract(d):
     return inline, pool
 
 
-def rebuild(d, inline=None, pool=None):
-    """inline: {offset_da_instrucao: bytes novos}; pool: {offset_no_pool: bytes novos}."""
+def reading_slots(d):
+    """{indice_na_tabela: offset_no_pool} dos campos de leitura do dicionario do Shiritori.
+    Registro na tabela: 0x90000010, 0x2000f024 ou 0x2000b024, palavra (tag 5), leitura em kana (tag 5), ...
+    O jogo encadeia as palavras pela leitura: ela fica sempre em japones."""
+    tv = table_values(d)
+    out = {}
+    for i in range(2, len(tv) - 1):
+        if (tv[i - 2] == 0x90000010 and tv[i - 1] in (0x2000F024, 0x2000B024)
+                and tv[i] >> 28 == 5 and tv[i + 1] >> 28 == 5):
+            out[i + 1] = tv[i + 1] & 0xFFFFFFF
+    return out
+
+
+def rebuild(d, inline=None, pool=None, extra=None, table_new=None):
+    """inline: {offset_da_instrucao: bytes novos}; pool: {offset_no_pool: bytes novos}.
+    extra: strings novas acrescentadas no fim do pool; table_new: {indice_na_tabela: indice em extra} faz
+    aquela entrada (tag 5) da tabela apontar para a string nova."""
     inline, pool = inline or {}, pool or {}
+    extra, table_new = extra or [], table_new or {}
     ins = decode(d)
     stub = decode_stub(d)
     lay = layout(d)
@@ -88,6 +104,18 @@ def rebuild(d, inline=None, pool=None):
             newpool += pool[o] + b"\0\0"
         else:
             newpool += d[lay["pool"] + o:lay["pool"] + e]
+    extra_at = []
+    if extra:
+        # o leitor do pool anda de string em string ([texto][00][1 byte]); os zeros do fim viram strings vazias de
+        # 2 bytes. A primeira string nova tem que comecar onde esse passo termina, senao fica 1 byte fora
+        i = max(pmap[o] for o, kind, e in pool_entries(d, ins) if kind == "str")
+        while i < len(newpool):
+            z = newpool.find(b"\0", i)
+            i = len(newpool) if z < 0 else z + 2
+        newpool += b"\0" * (i - len(newpool))
+    for s in extra:
+        extra_at.append(len(newpool))
+        newpool += s + b"\0\0"
     newpool += b"\0" * ((-len(newpool)) % 4)  # a tabela (u32) comeca alinhada em 4
     for at, (po, op, size) in prefs.items():
         p = moved(at)
@@ -96,7 +124,9 @@ def rebuild(d, inline=None, pool=None):
     # 4) tabela
     table = bytearray(d[lay["table"]:])
     for k, v in enumerate(table_values(d)):
-        if v >> 28 in (5, 0xE):
+        if k in table_new:
+            struct.pack_into("<I", table, 4 * k, 0x50000000 | extra_at[table_new[k]])
+        elif v >> 28 in (5, 0xE):
             struct.pack_into("<I", table, 4 * k, (v & 0xF0000000) | pmap[v & 0xFFFFFFF])
 
     out = bytearray(code) + newpool + table

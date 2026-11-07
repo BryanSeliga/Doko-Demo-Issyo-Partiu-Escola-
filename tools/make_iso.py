@@ -14,7 +14,7 @@ from build_iso import build
 from extract_all import collect
 from gtext import TOKEN, to_bytes, to_text
 from iso_common import Iso, bpm_files, inner_files, ksc_files
-from ksc import extract, rebuild
+from ksc import extract, reading_slots, rebuild
 import title_logo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -62,7 +62,16 @@ def apply(d, pt):
     new_inline, new_pool = tr(inline), tr(pool)
     if not new_inline and not new_pool:
         return None, 0
-    return rebuild(d, new_inline, new_pool), len(new_inline) + len(new_pool)
+    # leituras do dicionario do Shiritori ficam em kana: se o texto delas foi traduzido (a mesma string serve de
+    # palavra ou aparece em outro lugar), a leitura passa a apontar para uma copia do original
+    extra, table_new, copy_of = [], {}, {}
+    for k, o in reading_slots(d).items():
+        if o in new_pool:
+            if o not in copy_of:
+                copy_of[o] = len(extra)
+                extra.append(pool[o])
+            table_new[k] = copy_of[o]
+    return rebuild(d, new_inline, new_pool, extra, table_new), len(new_inline) + len(new_pool)
 
 
 def main(src, dst):

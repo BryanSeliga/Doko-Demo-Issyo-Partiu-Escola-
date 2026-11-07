@@ -15,7 +15,8 @@ import sys
 from extract_all import JP, collect
 from gtext import TOKEN, to_bytes, to_text
 from iso_common import Iso, ksc_files
-from ksc import extract
+from ksc import extract, reading_slots
+from kscdis import pool_refs_ex, table_values
 from widths import width
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -31,6 +32,8 @@ FASES = {
     "eventos": ["MASABUS.KSC", "SOTSUGYO_ARRIVE.KSC", "SOTSUGYO.KSC", "NISHISP", "ASCHOOL", "OSCHOOL", "SKETCH.KSC",
                 "SYUGYO", "SARU_INTRO.KSC", "SARU", "_CLUB_JAPAN.KSC", "_CLUB_MASAMI_IQ", "_CLUB_NANKAIKANJI.KSC",
                 "_CLUB_SHIRITORI.KSC", "ADHOC.KSC", "INPSP.KSC"],
+    # dicionario do Shiritori em equipes: so as palavras; as leituras em kana ficam no original (ksc.reading_slots)
+    "shiritori": ["_SHIRITORI_TEAM"],
 }
 
 
@@ -92,6 +95,14 @@ def vocab_pairs(texts):
     return out
 
 
+def reading_only(d):
+    """Offsets do pool usados so como leitura do dicionario do Shiritori (nao aparecem como texto)."""
+    slots = reading_slots(d)
+    other = {po for po, _, _ in pool_refs_ex(d).values()}
+    other |= {v & 0xFFFFFFF for k, v in enumerate(table_values(d)) if v >> 28 == 5 and k not in slots}
+    return set(slots.values()) - other
+
+
 def done_ids():
     out = set()
     for path in glob.glob(os.path.join(ROOT, "traducao", "*.jsonl")):
@@ -120,12 +131,16 @@ def gerar(iso_path, fase):
 
     nomes = [n for e in FASES[fase] for n in ([e] if e.endswith(".KSC") else grupo(iso, [e]))]
     for name in nomes:
-        inline, pool = extract(iso.bp(*files[name]))
+        d = iso.bp(*files[name])
+        inline, pool = extract(d)
         tin, tpool = texts_of(inline), texts_of(pool)
-        pairs = vocab_pairs(tpool)
+        so_leitura = reading_only(d)
+        # no Shiritori os pares palavra|leitura sao o proprio conteudo: a palavra e traduzida, a leitura nao
+        pairs = set() if fase == "shiritori" else vocab_pairs(tpool)
+        offs = [None] * len(tin) + list(pool)
         for k, text in enumerate(tin + tpool):
             it = by_text.get(text)
-            if not it or it["id"] in seen or it["id"] in done:
+            if not it or it["id"] in seen or it["id"] in done or offs[k] in so_leitura:
                 continue
             seen.add(it["id"])
             row = {"id": it["id"], "tipo": it["tipo"], "jp": it["jp"], "arquivo": name}
