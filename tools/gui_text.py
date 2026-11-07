@@ -83,7 +83,27 @@ COMMON = {
     "TIME_1GEN": "Aula 1",
     "TIME_2GEN": "Aula 2",
     "TIME_3GEN": "Aula 3",
+    # placa do diretor, loja e lavanderia, Shiritori
+    "BGKC_NAFUDA": "Diretor",
+    "PS_GOMARK": "Joga",
+    "CL_PRICET": "Preços",
+    "BUY_COS": "Fantasia",
+    "BUY_DF": "Defesa",
+    "BUY_NEW": "Novo!",
+    "BUY_POKE": "Quem veste",
+    "BUY_PRICE": "Preço",
+    "SR_W_KOUGEKI": "At.",
+    "ST_BAR_ATTACK1": "At.",
+    "ST_BAR_ATTACK2": "At.",
+    "ST_BAR_KAI": "Rod.",
+    "ST_BAR_OMOTE": "Ida",
+    "ST_BAR_URA": "Volta",
+    "ST_LOSE": "Perdeu!",
+    "ST_WIN": "Venceu!",
 }
+
+# Rotulos com desenho (seta, placa, faixa, circulo): so as letras sao trocadas (gui_render.relabel).
+SHAPES = {"PS_GOMARK", "CL_PRICET", "ST_BAR_ATTACK1", "ST_BAR_ATTACK2", "BGKC_NAFUDA"}
 
 # So no pacote indicado.
 BY_PACK = {
@@ -93,5 +113,27 @@ BY_PACK = {
         "TT_SENSEI": "Prof. por 1 dia",
         "TT_SARU": "Vídeos extras",
         "TT_MOVIE": "Vídeos",
+    },
+    # placar e caderno de palavras. As abas do caderno sao as colunas do silabario: as palavras continuam
+    # agrupadas pela leitura em kana, entao a aba leva o nome da coluna (A, Ka, Sa...) e nao uma letra latina
+    "RECORD.BPM": {
+        "TEXT00": "Histórico",
+        "TEXT01": "Total",
+        "TEXT02": "Ganhou ☆",
+        "TEXT03": "Perdeu ☆",
+        "TEXT04": "Últ. rivais",
+        "TEXT05": "Escola",
+        "TEXT06": "Jogador",
+        "TEXT07": "V/D",
+        "TEXTA1": "V",
+        "TEXTA2": "D",
+        "TEXTA3": "Taxa",
+        "TEXTA5": "un.",
+        "MEMO_WORD1": "A", "MEMO_WORD2": "Ka", "MEMO_WORD3": "Sa", "MEMO_WORD4": "Ta", "MEMO_WORD5": "Na",
+        "MEMO_WORD6": "Ha", "MEMO_WORD7": "Ma", "MEMO_WORD8": "Ya", "MEMO_WORD9": "Ra", "MEMO_WORD10": "Wa",
+        "MEMO_WORD12": "123",
+        "MEMO_WORD13": "Data",
+        "MEMO_WORD14": "Palavra",
+        "MEMO_WORD15": "Leitura",
     },
 }

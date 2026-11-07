@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from gim import image_info, parse, swizzle, to_rgba, unswizzle
-from gui_text import BY_PACK, COMMON
+from gui_text import BY_PACK, COMMON, SHAPES
 from iso_common import inner_files
 
 # M PLUS Rounded 1c (SIL OFL, ver fonts/OFL.txt): o mesmo desenho arredondado do patch em ingles.
@@ -170,6 +170,29 @@ def rgba_array(data):
     return np.frombuffer(bytes(rgba), np.uint8).reshape(h, w, 4)
 
 
+def relabel(data, text):
+    """Rotulo com desenho (seta, placa, faixa): so as letras saem. Os pixels de letra (cor diferente da forma,
+    longe da borda dela) sao recompostos com os vizinhos e o portugues e escrito na mesma area, na cor deles."""
+    from title_logo import erase_mask
+    px = rgba_array(data).astype(int)
+    h, w = px.shape[:2]
+    solid = px[:, :, 3] > 128
+    inner = np.asarray(Image.fromarray((solid * 255).astype(np.uint8)).filter(ImageFilter.MinFilter(5))) > 0
+    if inner.sum() < 20:  # forma pequena (circulo do "novo"): a erosao comeria tudo
+        inner = np.asarray(Image.fromarray((solid * 255).astype(np.uint8)).filter(ImageFilter.MinFilter(3))) > 0
+    colors = collections.Counter(map(tuple, px[inner][:, :3]))
+    shape = np.array(colors.most_common(1)[0][0])
+    ink = inner & (np.abs(px[:, :, :3] - shape).sum(axis=2) > 90)
+    ys, xs = np.nonzero(ink)
+    color = collections.Counter(map(tuple, px[ink][:, :3])).most_common(1)[0][0]
+    x0, y0, x1, y1 = xs.min(), ys.min(), xs.max() + 1, ys.max() + 1
+    grown = np.asarray(Image.fromarray((ink * 255).astype(np.uint8)).filter(ImageFilter.MaxFilter(3))) > 0
+    base = erase_mask(Image.fromarray(px.astype(np.uint8), "RGBA"), grown & solid)
+    layer = render_hi(text, x1 - x0, y1 - y0, color, None, None).resize((x1 - x0, y1 - y0), Image.LANCZOS)
+    base.alpha_composite(layer, (int(x0), int(y0)))
+    return write_gim(data, base)
+
+
 def build_all(iso, bpms):
     """Devolve {(pacote, nome_interno): bytes} com todas as imagens traduzidas. bpms: {pacote: (offset, tamanho)}."""
     out = {}
@@ -185,6 +208,9 @@ def build_all(iso, bpms):
             if text == "":  # pedaco que continuava o titulo japones: fica vazio
                 w, h = gim_size(data)
                 out[(pack, name)] = write_gim(data, Image.new("RGBA", (w, h), (0, 0, 0, 0)))
+                continue
+            if key in SHAPES:
+                out[(pack, name)] = relabel(data, text)
                 continue
             out[(pack, name)] = write_gim(data, label_hi(data, text).resize(gim_size(data), Image.LANCZOS))
     return out
