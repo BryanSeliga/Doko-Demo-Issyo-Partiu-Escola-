@@ -1,0 +1,97 @@
+"""Rotulos de interface que sao imagens: nome do GIM (sem pasta e extensao) -> texto em portugues.
+Texto vazio apaga a imagem (pedaco que so continuava um titulo japones mais longo).
+Ficam como estao: KEY_SYS_KOUHO e KEY_SYS_SHOU (conversao de kana) e STATUS_DAY/ME/MONTH (pedacos da data)."""
+
+# Valem para qualquer pacote que tenha uma imagem com esse nome.
+COMMON = {
+    # rodapes de navegacao
+    "NW_BACK": "Voltar",
+    "NW_COS": "Fantasia",
+    "NW_ENTRY": "Jogar",
+    "NW_NEXT": "Próx.",
+    "NW_OK": "OK",
+    "NW_SCROLL": "Rolar",
+    "NW_TAB": "Trocar aba",
+    "NW_YAME": "Esquece",
+    "SEL_GUIDEW1": "Escolher Pokepi",
+    "SEL_GUIDEW2": "OK",
+    "SEL_KT_MOJI": "OK",
+    # titulos das salas
+    "ROOM_TITLE_AV": "Sala de vídeo",
+    "ROOM_TITLE_AV_SETTING": "Config. de rede",
+    "ROOM_TITLE_CLEANING": "Lavanderia",
+    "ROOM_TITLE_CLUB": "Clube",
+    "ROOM_TITLE_CLUB_PRACTICE": "Jogo-treino",
+    "ROOM_TITLE_CLUB_TRANING": "Treino",
+    "ROOM_TITLE_CLUB_TRANING_SEL": "Escolher treino",
+    "ROOM_TITLE_JYUGYOU_SEL": "Escolher aula",
+    "ROOM_TITLE_KOUCYOU": "Sala do diretor",
+    "ROOM_TITLE_NT_DL1": "Aula baixada",
+    "ROOM_TITLE_NT_DL2": "",
+    "ROOM_TITLE_POKEPI": "Escolher Pokepi",
+    "ROOM_TITLE_SCHOOL": "Mapa da escola",
+    "ROOM_TITLE_SEITO_BO2": "Procurar rival",
+    "ROOM_TITLE_SEITO_BO22": "",
+    "ROOM_TITLE_SEITO_CO": "Aceitar desafio",
+    "ROOM_TITLE_SEITO_COSPRE": "Shiritori fantasia",
+    "ROOM_TITLE_SHOP": "Lojinha",
+    "ROOM_TITLE_SHOP_BUY": "Comprar fantasia",
+    "ROOM_TITLE_SHOP_NOTE": "Caderno fantasia",
+    "ROOM_TITLE_SHOP_NOTE_S": "Detalhes",
+    "ROOM_TITLE_SHOP_SELECT": "Escolher fantasia",
+    "ROOM_TITLE_SPECIAL": "Salas especiais",
+    "ROOM_TITLE_TEACHERS": "Sala dos prof.",
+    "ROOM_TITLE_TEACHERS_TUUSHIN": "Boletim",
+    "ROOM_TITLE_TIMESCHE": "Horário",
+    "ROOM_TITLE_TODAYS": "Foto do dia",
+    "ROOM_TITLE_TR_ALBUM": "Álbum",
+    "ROOM_TITLE_TR_KOTOBA": "Caderno",
+    "ROOM_TITLE_TR_SCORE": "Placar",
+    # menu da escola
+    "MENU_NAME1": "Aula",
+    "MENU_NAME1_2": "Clube",
+    "MENU_NAME1_3": "Casa",
+    "MENU_NAME1_4": "Férias",
+    "MENU_NAME1_5": "Entrada",
+    "MENU_NAME1_6": "Formatura",
+    "MENU_NAME2": "Aula especial",
+    "MENU_NAME4": "Lojinha",
+    "MENU_NAME5": "Sala de vídeo",
+    "MENU_NAME6": "Professores",
+    "MENU_NAME7": "Diretoria",
+    # teclado
+    "KEY_SYS_CANCEL": "Cancelar",
+    "KEY_SYS_EISU": "ABC",
+    "KEY_SYS_JAPANESE": "Kana",
+    "KEY_SYS_KETTEI": "OK",
+    "KEY_SYS_KIGOU": "Símb.",
+    "KEY_SYS_ROME": "Romaji",
+    "KEY_SYS_SAKUJYO": "Apagar",
+    # barra de estado e cronometro
+    "STATUS_GEKOU": "Saída",
+    "STATUS_HIRU": "Almoço",
+    "STATUS_HOUKAGO": "Pós-aula",
+    "STATUS_TOUKOU": "Chegada",
+    "STATUS_YASUMI": "Recreio",
+    "TIME_KEIKA": "Tempo",
+    "TIME_NOKORI": "Resta",
+    # grade de horario
+    "TIME_1DAY": "Dia 1",
+    "TIME_2DAY": "Dia 2",
+    "TIME_3DAY": "Dia 3",
+    "TIME_4DAY": "Dia 4",
+    "TIME_1GEN": "Aula 1",
+    "TIME_2GEN": "Aula 2",
+    "TIME_3GEN": "Aula 3",
+}
+
+# So no pacote indicado.
+BY_PACK = {
+    "TITLE.BPM": {
+        "TT_HAJIME": "Novo jogo",
+        "TT_TUDUKI": "Continuar",
+        "TT_SENSEI": "Prof. por 1 dia",
+        "TT_SARU": "Vídeos extras",
+        "TT_MOVIE": "Vídeos",
+    },
+}
