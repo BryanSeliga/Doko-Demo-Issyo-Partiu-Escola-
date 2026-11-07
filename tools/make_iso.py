@@ -48,6 +48,12 @@ def load_translations(items):
     return out
 
 
+# Rotina comum de todos os scripts que abre o teclado de nome: empilha a funcao 0x24, o tipo 3 (kana + ABC) e o
+# limite 4, e chama o sistema (8b f1 03). O limite passa a 7, como no Issyo: "Sophia" tem 6 letras.
+NAME_CALL = bytes.fromhex("8024 8003 8004 8bf103")
+NAME_CALL_NEW = bytes.fromhex("8024 8003 8007 8bf103")
+
+
 def apply(d, pt):
     inline, pool = extract(d)
 
@@ -64,7 +70,7 @@ def apply(d, pt):
 
     new_inline, new_pool = tr(inline), tr(pool)
     if not new_inline and not new_pool:
-        return None, 0
+        return (d.replace(NAME_CALL, NAME_CALL_NEW) if NAME_CALL in d else None), 0
     # leituras do dicionario do Shiritori ficam em kana: se o texto delas foi traduzido (a mesma string serve de
     # palavra ou aparece em outro lugar), a leitura passa a apontar para uma copia do original
     extra, table_new, copy_of = [], {}, {}
@@ -74,7 +80,7 @@ def apply(d, pt):
                 copy_of[o] = len(extra)
                 extra.append(pool[o])
             table_new[k] = copy_of[o]
-    return rebuild(d, new_inline, new_pool, extra, table_new), len(new_inline) + len(new_pool)
+    return rebuild(d, new_inline, new_pool, extra, table_new).replace(NAME_CALL, NAME_CALL_NEW), len(new_inline) + len(new_pool)
 
 
 def main(src, dst):

@@ -1,6 +1,8 @@
 """Textos do BOOT.BIN do Let's Gakkou: offset no arquivo -> portugues. Cada um precisa caber no espaco original
 (ate o proximo byte nao zero). Ficam como estao: as tabelas romaji -> kana do teclado (0xD0169-0xD0E05), a tabela
 de kana do Shiritori (0xD5258-0xD539C) e a mensagem de depuracao de arquivo nao achado (0xD4394)."""
+import struct
+
 from gtext import to_bytes
 
 # Shift-JIS desenhado com a fonte do sistema (acentos pelo JIS X 0213, como nos scripts)
@@ -90,6 +92,16 @@ UTF8 = {
 }
 
 
+# Codigo: endereco virtual -> (instrucao original, nova). O segmento comeca no byte 0x60 do arquivo.
+# Teclado (rotina 0x8983C, chamada ao abrir): a1/a2/a3 dizem se as paginas kana/ABC/simbolos valem para o campo
+# (tabela de tipos em 0xD49D8) e a pagina atual fica em +0x290, comecando sempre em 0 (kana). Passa a comecar no
+# valor de a2: 1 (ABC) quando o campo aceita letras latinas (nomes e palavras), 0 nos campos so de kana.
+CODE = {
+    0x89868: (0xAC800290, 0xAC860290),  # sw zero, 0x290(a0) -> sw a2, 0x290(a0)
+}
+CODE_FILE_OFFSET = 0x60
+
+
 def capacity(boot, off):
     end = boot.index(b"\0", off)
     while boot[end] == 0:
@@ -106,4 +118,8 @@ def patch_boot(boot):
             cap = capacity(boot, off)
             assert len(raw) <= cap, (hex(off), text, len(raw), cap)
             out[off:off + cap + 1] = raw + b"\0" * (cap + 1 - len(raw))
+    for va, (old, new) in CODE.items():
+        off = va + CODE_FILE_OFFSET
+        assert struct.unpack_from("<I", boot, off)[0] == old, hex(va)
+        struct.pack_into("<I", out, off, new)
     return bytes(out)
