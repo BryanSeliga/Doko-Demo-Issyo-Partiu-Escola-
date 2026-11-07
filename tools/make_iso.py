@@ -17,6 +17,7 @@ from iso_common import BOOT_LBA, BOOT_SIZE, Iso, bpm_files, inner_files, ksc_fil
 from ksc import extract, reading_slots, rebuild
 import boot_text
 import gui_render
+import textures
 import title_logo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -93,7 +94,8 @@ def main(src, dst):
     title = title_logo.build(iso.bp(*tfiles[title_logo.LOGO[1]]), iso.bp(*tfiles[title_logo.BG[1]]))
     # rotulos de interface que sao imagens (botoes, rodapes, titulos das salas), no mesmo tamanho
     bpm = {"TITLE.BPM": title}
-    for (pack, name), data in gui_render.build_all(iso, bpms).items():
+    # e texto desenhado no cenario (lanternas, placas, etiquetas, o bilhete do album)
+    for (pack, name), data in {**gui_render.build_all(iso, bpms), **textures.build_all(iso, bpms)}.items():
         bpm.setdefault(pack, {})[name] = data
     print(f"{sum(len(v) for v in bpm.values())} imagens em {len(bpm)} pacotes")
     boot = boot_text.patch_boot(iso.read(BOOT_LBA, BOOT_SIZE))  # menus, botoes e janelas do sistema
