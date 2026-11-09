@@ -6,11 +6,8 @@ import hashlib
 import os
 import sys
 
-from iso_common import BOOT_LBA, BOOT_SIZE, DATA_BP_LBA, SECTOR, Iso, bpm_files
+from iso_common import BOOT_LBA, BOOT_SIZE, DATA_BP_LBA, SECTOR, Iso, top_files
 from vcdiff import apply, create
-
-# Pacotes reescritos no fim do DATA.BP: o codificador procura trechos deles no original.
-MOVED = ("KSNEKO.BPM", "KSINU.BPM", "KSROBO.BPM", "KSKAERU.BPM", "KSUSAGI.BPM", "TITLE.BPM", "QUICK.BPM")
 
 
 def sha1(path):
@@ -22,12 +19,16 @@ def sha1(path):
 
 
 def main(src, dst, out):
-    iso = Iso(src)
+    # arquivos do topo do DATA.BP que mudaram de lugar (scripts e pacotes que cresceram vao para o fim): o
+    # codificador procura trechos deles na posicao antiga, no original
+    old = {e[0]: (e[1], e[2]) for e in top_files(Iso(src))}
+    new = {e[0]: (e[1], e[2]) for e in top_files(Iso(dst))}
     regions = [(BOOT_LBA * SECTOR, BOOT_LBA * SECTOR + BOOT_SIZE)]
-    for name, off, size in bpm_files(iso):
-        if name in MOVED:
+    for name, (off, size) in old.items():
+        if new.get(name, (off, size))[0] != off:
             start = DATA_BP_LBA * SECTOR + off
             regions.append((start, start + size))
+    print(len(regions) - 1, "arquivos mudaram de lugar")
     create(src, dst, out, regions)
     check = out + ".teste.iso"
     apply(src, out, check)
