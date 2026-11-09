@@ -61,7 +61,7 @@ def apply(d, pt):
         new = {}
         for k, raw in group.items():
             try:
-                text = to_text(raw)
+                text = to_text(raw, extra=True)
             except (UnicodeDecodeError, KeyError):
                 continue
             if text in pt:

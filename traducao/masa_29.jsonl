@@ -77,7 +77,7 @@
 {"id": 2004, "pt": "O tempo limite é de {16}{14:000a}{16} segundos"}
 {"id": 2005, "pt": "Tempo de conclusão: {16}{1d}{16} segundos"}
 {"id": 2006, "pt": "Fim do tempo: {16}{1d}{16} acertos"}
-{"id": 13657, "pt": "O quê?\\nUma aula exclusiva pra {16}{1d}{16}, usa?"}
+{"id": 13657, "pt": "O quê?\nUma aula exclusiva pra {16}{1d}{16}, usa?"}
 {"id": 13658, "pt": "A faz {16}{14:0000}{16}"}
 {"id": 13659, "pt": "B faz {16}{14:0000}{16}"}
 {"id": 13660, "pt": "C faz {16}{14:0000}{16}, miau"}
@@ -91,7 +91,7 @@
 {"id": 13668, "pt": "Hmmm, até {16}{1d}{16} assim…"}
 {"id": 13669, "pt": "{16}{1d}{16} tem razão, miau!"}
 {"id": 13670, "pt": "Normalmente só dá pra girar uns {16}{14:0000}{16}, miau!"}
-{"id": 13671, "pt": "Isso deve ser…\\ntipo {16}{14:0000}{16}, pyon!"}
+{"id": 13671, "pt": "Isso deve ser…\ntipo {16}{14:0000}{16}, pyon!"}
 {"id": 3084, "pt": "{16}{14:0000}{16}?"}
 {"id": 2023, "pt": "Wi"}
 {"id": 2031, "pt": "We"}
@@ -167,7 +167,7 @@
 {"id": 13678, "pt": "Conheço, au~!"}
 {"id": 5795, "pt": "Dança"}
 {"id": 13679, "pt": "O ABC do romance, miau~"}
-{"id": 13680, "pt": "Nossa…\\nVocês não têm vergonha, sô?"}
+{"id": 13680, "pt": "Nossa…\nVocês não têm vergonha, sô?"}
 {"id": 13681, "pt": "Tô nem aí, miau"}
 {"id": 13682, "pt": "Bem…"}
 {"id": 13683, "pt": "Até coisas simples que a gente conhece bem…"}
@@ -184,9 +184,9 @@
 {"id": 13695, "pt": "Treinando, a habilidade melhora!"}
 {"id": 13696, "pt": "Girar a cabeça ao contrário deve ser moleza, mas…"}
 {"id": 13697, "pt": "Não, o giro ao contrário da cabeça não é nesse sentido…"}
-{"id": 13698, "pt": "Injusto, miau\\nInjusto, miau"}
+{"id": 13698, "pt": "Injusto, miau\nInjusto, miau"}
 {"id": 13699, "pt": "Não, é que…"}
-{"id": 13700, "pt": "Injusto, miau\\nInjusto, miau\\nInjusto, miau"}
+{"id": 13700, "pt": "Injusto, miau\nInjusto, miau\nInjusto, miau"}
 {"id": 13701, "pt": "É injusto, né"}
 {"id": 13702, "pt": "Não é injusto"}
 {"id": 13703, "pt": "Aliás, cabeça girando e girando é estranho, miau"}
@@ -197,12 +197,12 @@
 {"id": 13708, "pt": "Traição"}
 {"id": 1334, "pt": "{16}{1d}{16}, que incrível!"}
 {"id": 1335, "pt": "{16}{1d}{16} não é azul, né?"}
-{"id": 1336, "pt": "{16}{1d}{16} também é branco, miau\\nSomos amigos, miau~"}
+{"id": 1336, "pt": "{16}{1d}{16} também é branco, miau\nSomos amigos, miau~"}
 {"id": 1337, "pt": "E aí, se {16}{1d}{16} comer o amigo bacalhau…"}
 {"id": 1338, "pt": "Quem começa a comer por {16}{14:0003}{16}~"}
 {"id": 1339, "pt": "Dizem que é gente com estresse acumulado por {16}{14:0002}{16}, au~"}
 {"id": 1340, "pt": "Eu como taiyaki começando pela parte {16}{14:0002}{16}, sô~"}
-{"id": 1341, "pt": "{16}{1d}{16} é um gatinho fraco, né~\\nGato + fraco = {16}{1d}{16}!"}
+{"id": 1341, "pt": "{16}{1d}{16} é um gatinho fraco, né~\nGato + fraco = {16}{1d}{16}!"}
 {"id": 1342, "pt": "Primeiro amor tem gosto de {16}{14:0002}{16}, miau"}
 {"id": 1343, "pt": "Boa! Uma almofada pra {16}{1d}{16}!"}
 {"id": 1344, "pt": "E uma pra {16}{14:0002}{16} também"}
@@ -217,13 +217,13 @@
 {"id": 12791, "pt": "É só deixar {16}{1d}{16}, seu par, fazer o pedido"}
 {"id": 12792, "pt": "Ah, {16}{1d}{16} é inteligente, miau~"}
 {"id": 12793, "pt": "{16}{1d}{16}, quantos kanji de peixe você sabe ler, miau?"}
-{"id": 12794, "pt": "Bem, é que…\\ncomo dizer…\\n{16}{1d}{16}?"}
+{"id": 12794, "pt": "Bem, é que…\ncomo dizer…\n{16}{1d}{16}?"}
 {"id": 12795, "pt": "Num encontro com {16}{1d}{16}, melhor evitar sushiria"}
 {"id": 12796, "pt": "Assim eu posso ir num encontro com {16}{1d}{16}~"}
 {"id": 12797, "pt": "{16}{1d}{16} numa sushiria com balcão"}
-{"id": 12798, "pt": "Eba!\\nÉ convite de {16}{1d}{16}, miau~"}
+{"id": 12798, "pt": "Eba!\nÉ convite de {16}{1d}{16}, miau~"}
 {"id": 12800, "pt": "A sushiria em {16}{14:0001}{16} é a recomendada, miau"}
 {"id": 12801, "pt": "Uau, {16}{1d}{16} quebrou~!"}
 {"id": 1355, "pt": "Atum"}
 {"id": 1357, "pt": "Ter"}
-{"id": 1358, "pt": "Na China, este kanji indica o esturjão\\nporque o esturjão e o atum têm formas parecidas"}
+{"id": 1358, "pt": "Na China, este kanji indica o esturjão\nporque o esturjão e o atum têm formas parecidas"}

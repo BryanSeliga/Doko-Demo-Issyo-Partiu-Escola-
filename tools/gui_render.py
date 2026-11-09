@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from gim import image_info, parse, swizzle, to_rgba, unswizzle
-from gui_text import BY_PACK, COMMON, SHAPES
+from gui_text import BY_PACK, COMMON, KEEP_AREA, SHAPES, STYLE
 from iso_common import inner_files
 
 # M PLUS Rounded 1c (SIL OFL, ver fonts/OFL.txt): o mesmo desenho arredondado do patch em ingles.
@@ -140,16 +140,36 @@ def gim_size(data):
     return w, h
 
 
-def label_hi(data, text, max_w=None):
+def label_hi(data, text, max_w=None, keep_area=False, style=None):
+    """keep_area: o texto fica na faixa do japones (a textura e maior que a parte visivel do botao).
+    style: {"fill": cor, "outline": cor} no lugar das cores tiradas da imagem original."""
     w, h, rgba, _ = to_rgba(data)
     fill, outline, bg = analyse(w, h, rgba)
+    if style:
+        fill, outline = style.get("fill", fill), style.get("outline", outline)
     area = ink_area(data, bg)
     # titulos e rodapes deste jogo: o japones encosta na esquerda e o resto da textura fica vazio (e visivel);
     # o portugues, mais comprido, pode usar a largura toda, tambem encostado na esquerda
     left = area is not None and area[0] <= 3 and area[1] < w - 2
-    if left:
+    if left and not keep_area:
         area = (area[0], w)
+    if style and "area" in style:  # faixa fixa (x0, x1) onde o texto e centralizado
+        area, left = style["area"], False
     return render_hi(text, w, h, fill, outline, bg, max_w, area, left)
+
+
+def fill_holes(im, color):
+    """Pinta os miolos fechados das letras (transparencia que nao se liga a borda da imagem) com color."""
+    a = np.asarray(im)[:, :, 3]
+    clear = Image.fromarray(np.where(a < 128, 255, 0).astype(np.uint8), "L").copy()
+    w, h = clear.size
+    for xy in [(x, y) for x in range(w) for y in (0, h - 1)] + [(x, y) for y in range(h) for x in (0, w - 1)]:
+        if clear.getpixel(xy) == 255:
+            ImageDraw.floodfill(clear, xy, 128)
+    holes = np.asarray(clear) == 255
+    px = np.asarray(im).copy()
+    px[holes] = (*color, 255)
+    return Image.fromarray(px, "RGBA")
 
 
 def ink_area(data, bg):
@@ -212,5 +232,12 @@ def build_all(iso, bpms):
             if key in SHAPES:
                 out[(pack, name)] = relabel(data, text)
                 continue
-            out[(pack, name)] = write_gim(data, label_hi(data, text).resize(gim_size(data), Image.LANCZOS))
+            keep = key.startswith(KEEP_AREA)
+            style = next((v for k, v in STYLE.items() if key.startswith(k)), None)
+            # botoes do menu da escola: os de 128 px passavam da borda da tela quando nao estao escolhidos;
+            # todos ficam com a largura dos de 64 px
+            hi = label_hi(data, text, max_w=56 if key.startswith("MENU_NAME") else None, keep_area=keep, style=style)
+            if style and "holes" in style:
+                hi = fill_holes(hi, style["holes"])
+            out[(pack, name)] = write_gim(data, hi.resize(gim_size(data), Image.LANCZOS))
     return out

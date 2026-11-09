@@ -55,7 +55,7 @@
 {"id": 12231, "pt": "Miaau~..."}
 {"id": 12593, "pt": "Buááá, buááá"}
 {"id": 13842, "pt": "Peraí... Trocaram mesmo?"}
-{"id": 13843, "pt": "Hã?\\nÉ pegadinha?"}
+{"id": 13843, "pt": "Hã?\nÉ pegadinha?"}
 {"id": 13844, "pt": "É verdade, miau!"}
 {"id": 13845, "pt": "Quem está fazendo pegadinha?!"}
 {"id": 13846, "pt": "Acredita, miau!"}
@@ -67,7 +67,7 @@
 {"id": 13852, "pt": "Quando os dois têm algum fator em comum..."}
 {"id": 13853, "pt": "e se esbarram com força..."}
 {"id": 13854, "pt": "Presume-se que isso causou uma ressonância entre os estados mentais, robô"}
-{"id": 13855, "pt": "Hmm, que fenômeno raro, robô.\\nVale a pena pesquisar, robô"}
+{"id": 13855, "pt": "Hmm, que fenômeno raro, robô.\nVale a pena pesquisar, robô"}
 {"id": 13856, "pt": "Para de analisar com calma e faz alguma coisa, pyon"}
 {"id": 13857, "pt": "Não entendi nada do que você disse, miau"}
 {"id": 13858, "pt": "Calma aí..."}
@@ -92,11 +92,11 @@
 {"id": 13876, "pt": "Que livro leu recentemente?"}
 {"id": 13877, "pt": "Rev. de imóveis"}
 {"id": 13878, "pt": "Livro recente"}
-{"id": 13879, "pt": "Entendi, entendi...\\nÉ isso então..."}
-{"id": 13880, "pt": "O quê?\\nDescobriu algo, pyon?"}
-{"id": 13881, "pt": "Não há nenhum\\nfator em comum!"}
+{"id": 13879, "pt": "Entendi, entendi...\nÉ isso então..."}
+{"id": 13880, "pt": "O quê?\nDescobriu algo, pyon?"}
+{"id": 13881, "pt": "Não há nenhum\nfator em comum!"}
 {"id": 13882, "pt": "Ou seja, esses itens não tinham relação nenhuma, robô"}
-{"id": 13883, "pt": "Arrgh!\\nTá de brincadeira?!"}
+{"id": 13883, "pt": "Arrgh!\nTá de brincadeira?!"}
 {"id": 13884, "pt": "Seu robô de segunda mão!"}
 {"id": 13885, "pt": "Cuidaaado, miau!"}
 {"id": 13886, "pt": "BUUUM!!"}
@@ -113,7 +113,7 @@
 {"id": 13897, "pt": "Então o choque funcionou para os dois, robô"}
 {"id": 13898, "pt": "Bom, caso encerrado, né?"}
 {"id": 13899, "pt": "Caso encerrado"}
-{"id": 13900, "pt": "Ué, se é assim,\\ndesde o começo..."}
+{"id": 13900, "pt": "Ué, se é assim,\ndesde o começo..."}
 {"id": 13901, "pt": "Assim!"}
 {"id": 13902, "pt": "Poxa, o que é isso, miau!"}
 {"id": 11893, "pt": "Rá rá rá"}
@@ -124,20 +124,20 @@
 {"id": 13907, "pt": "Tinha voltado ao normal e trocamos de novo, miau~"}
 {"id": 13908, "pt": "Seu sapo bobo!"}
 {"id": 13909, "pt": "O que é isso, pyon!"}
-{"id": 13910, "pt": "Buáá!\\nQuero voltar...\\nVoltar ao normal, miau~"}
+{"id": 13910, "pt": "Buáá!\nQuero voltar...\nVoltar ao normal, miau~"}
 {"id": 13911, "pt": "Não quero ser coelho, miau~"}
-{"id": 13912, "pt": "Como é que é?\\nO que tem de ruim em ser coelho, pyon!"}
-{"id": 13913, "pt": "Ai ai...\\nDesculpa, sô"}
+{"id": 13912, "pt": "Como é que é?\nO que tem de ruim em ser coelho, pyon!"}
+{"id": 13913, "pt": "Ai ai...\nDesculpa, sô"}
 {"id": 15654, "pt": "Prof. {16}{1d}{16}"}
 {"id": 15655, "pt": "Sou {16}{1d}{16}, o gato, miau"}
 {"id": 15656, "pt": "Sou {16}{1d}{16}, o robô ultra-avançado"}
 {"id": 15657, "pt": "Sou {16}{1d}{16}, a coelha"}
 {"id": 15659, "pt": "Sou {16}{1d}{16}, o lutador"}
 {"id": 15660, "pt": "{16}{1d}{16} também devia dar uma enxugada no corpo, né~"}
-{"id": 15661, "pt": "Sim!\\n{16}{14:000a}{16} vai fazer{16}{14:0006}{16}"}
+{"id": 15661, "pt": "Sim!\n{16}{14:000a}{16} vai fazer{16}{14:0006}{16}"}
 {"id": 15662, "pt": "Se é para ter líder, {16}{1d}{16} é a pessoa certa, au~"}
 {"id": 15663, "pt": "Para líder, pode deixar com {16}{1d}{16}, pyon"}
-{"id": 15664, "pt": "Ora?\\nIsso é um desafio para {16}{1d}{16}?"}
+{"id": 15664, "pt": "Ora?\nIsso é um desafio para {16}{1d}{16}?"}
 {"id": 15665, "pt": "Você acha que {16}{14:0007}{16} seria um bom representante da turma?"}
 {"id": 15666, "pt": "Quem acha que {16}{14:0007}{16} deve ser o representante da turma, levante a mão"}
 {"id": 15667, "pt": "Quem acha que {16}{1d}{16} deve ser o representante da turma, levante a mão"}
@@ -147,13 +147,13 @@
 {"id": 15671, "pt": "Vamos pedir a {16}{1d}{16} o discurso de representante da turma"}
 {"id": 15672, "pt": "Hora das perguntas dos Pokepi para Prof. {16}{1d}{16}"}
 {"id": 15673, "pt": "Tenho uma pergunta{16}{14:0003}{16}"}
-{"id": 15674, "pt": "Prof. {16}{1d}{16} é homem?\\nÉ mulher?"}
+{"id": 15674, "pt": "Prof. {16}{1d}{16} é homem?\nÉ mulher?"}
 {"id": 15675, "pt": "Sabe o quê? {16}{1d}{16} já sabe, miau!"}
 {"id": 15676, "pt": "{16}{1d}{16} é {16}{14:0004}{16}, miau!"}
-{"id": 15677, "pt": "É só olhar.\\n{16}{1d}{16} é {16}{14:0004}{16}, robô"}
+{"id": 15677, "pt": "É só olhar.\n{16}{1d}{16} é {16}{14:0004}{16}, robô"}
 {"id": 15678, "pt": "Claro que é {16}{14:0004}{16}, pyon!"}
-{"id": 15679, "pt": "É só olhar, au~\\nÉ {16}{14:0004}{16}, né?"}
-{"id": 15680, "pt": "É só olhar, sô.\\n{16}{1d}{16} é {16}{14:0004}{16}, croac"}
+{"id": 15679, "pt": "É só olhar, au~\nÉ {16}{14:0004}{16}, né?"}
+{"id": 15680, "pt": "É só olhar, sô.\n{16}{1d}{16} é {16}{14:0004}{16}, croac"}
 {"id": 15681, "pt": "Sou {16}{14:0004}{16}"}
 {"id": 15682, "pt": "Sou {16}{14:0005}{16}"}
 {"id": 15683, "pt": "É {16}{14:0004}{16}"}
@@ -182,7 +182,7 @@
 {"id": 15703, "pt": "Ti"}
 {"id": 15704, "pt": "tu"}
 {"id": 15705, "pt": "lar"}
-{"id": 15706, "pt": "Hmm.\\nUma pessoa inteligente, digna de Prof., robô"}
+{"id": 15706, "pt": "Hmm.\nUma pessoa inteligente, digna de Prof., robô"}
 {"id": 15707, "pt": "Que bom que o Prof. parece gentil, au"}
 {"id": 15708, "pt": "Que bom que o Prof. parece gentil, miau~"}
 {"id": 15709, "pt": "O Prof. é mais legal do que eu pensava, pyon"}
@@ -218,16 +218,16 @@
 {"id": 15739, "pt": "Então, pessoal, contem comigo, sô!"}
 {"id": 15740, "pt": "Depois me ensina a treinar, tá?"}
 {"id": 15741, "pt": "Desculpa, mas não faço esse treino molengo, sô"}
-{"id": 15742, "pt": "Grr...\\nQue antipático, au~..."}
+{"id": 15742, "pt": "Grr...\nQue antipático, au~..."}
 {"id": 15743, "pt": "Primeiro, vamos escolher o representante da turma."}
 {"id": 15744, "pt": "Representante?"}
 {"id": 15745, "pt": "O que é isso?"}
 {"id": 15746, "pt": "É o chamado líder de classe."}
 {"id": 15747, "pt": "O líder da turma, robô"}
 {"id": 15748, "pt": "Candidatos?"}
-{"id": 15750, "pt": "Ahh...\\nNão, miau~"}
-{"id": 15751, "pt": "Hmm!\\nQue atrevimento!"}
-{"id": 15752, "pt": "Hã?\\nQue coragem!"}
+{"id": 15750, "pt": "Ahh...\nNão, miau~"}
+{"id": 15751, "pt": "Hmm!\nQue atrevimento!"}
+{"id": 15752, "pt": "Hã?\nQue coragem!"}
 {"id": 15753, "pt": "Interessante, aceito o desafio, croac!"}
 {"id": 15754, "pt": "Então decidimos por votação, croac!"}
 {"id": 15755, "pt": "Claro que o Prof. também vota, sô"}

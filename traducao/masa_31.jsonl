@@ -15,7 +15,7 @@
 {"id": 1508, "pt": "{16}{1d}{16} venceu"}
 {"id": 1509, "pt": "Vez de {16}{14:0003}{16}"}
 {"id": 1510, "pt": "Palavra número {16}{1d}{16} de {16}{14:0003}{16}"}
-{"id": 1511, "pt": "Tcharam!\\n{16}{14:0005}{16}~"}
+{"id": 1511, "pt": "Tcharam!\n{16}{14:0005}{16}~"}
 {"id": 12952, "pt": "Número {16}{1d}{16}! Vai, {16}{14:0002}{16}, sô!"}
 {"id": 12953, "pt": "Tipo penhorar {16}{14:0000}{16}, miau"}
 {"id": 12954, "pt": "Pegar empréstimo com agiota pra {16}{14:0000}{16}~"}
@@ -27,32 +27,32 @@
 {"id": 12960, "pt": "Ganhando ou perdendo, {16}{1d}{16} não perde nada, mas…"}
 {"id": 12961, "pt": "{16}{1d}{16} tem… {16}{1d}{16} vitórias, {16}{1d}{16} derrotas e {16}{1d}{16} empates~"}
 {"id": 12962, "pt": "Quer dizer que {16}{1d}{16} ganhou, miau?"}
-{"id": 12963, "pt": "Eba!\\nParabéns, {16}{1d}{16}, miau~"}
+{"id": 12963, "pt": "Eba!\nParabéns, {16}{1d}{16}, miau~"}
 {"id": 12964, "pt": "Como combinado, {16}{1d}{16}, me ensina uma palavra, croac~"}
-{"id": 12965, "pt": "Ah é…\\n{16}{14:0000}{16}, pyon…"}
+{"id": 12965, "pt": "Ah é…\n{16}{14:0000}{16}, pyon…"}
 {"id": 12966, "pt": "Vou decorar {16}{14:0000}{16} e me vingar de {16}{1d}{16}…"}
 {"id": 12967, "pt": "Ah, {16}{1d}{16}? O que {16}{1d}{16} mais quer que façam agora"}
-{"id": 12968, "pt": "Certo!\\n{16}{1d}{16}, escute bem!"}
+{"id": 12968, "pt": "Certo!\n{16}{1d}{16}, escute bem!"}
 {"id": 12969, "pt": "A partir de agora, por um tempo, 1 vez por dia: {16}{14:0000}{16} para {16}{1d}{16}!"}
-{"id": 1518, "pt": "O que vai sair, miau?\\nO que vai sair, miau?"}
-{"id": 1519, "pt": "O que vai sair, robô?\\nO que vai sair, robô?"}
-{"id": 1520, "pt": "O que vai sair, usa?\\nO que vai sair, usa?"}
-{"id": 1521, "pt": "O que será que vai sair?\\nO que será que vai sair?"}
-{"id": 1522, "pt": "O que vai sair, croac?\\nO que vai sair, croac?"}
-{"id": 1523, "pt": "Eba!\\nPosso ganhar sem pegar a terceira, miau!"}
+{"id": 1518, "pt": "O que vai sair, miau?\nO que vai sair, miau?"}
+{"id": 1519, "pt": "O que vai sair, robô?\nO que vai sair, robô?"}
+{"id": 1520, "pt": "O que vai sair, usa?\nO que vai sair, usa?"}
+{"id": 1521, "pt": "O que será que vai sair?\nO que será que vai sair?"}
+{"id": 1522, "pt": "O que vai sair, croac?\nO que vai sair, croac?"}
+{"id": 1523, "pt": "Eba!\nPosso ganhar sem pegar a terceira, miau!"}
 {"id": 1524, "pt": "Heh, o resultado saiu sem precisar da terceira, robô"}
-{"id": 1525, "pt": "Croac~\\nEu ganhei, sô!"}
-{"id": 1526, "pt": "Eba, eba!\\nGanhei, miau~"}
+{"id": 1525, "pt": "Croac~\nEu ganhei, sô!"}
+{"id": 1526, "pt": "Eba, eba!\nGanhei, miau~"}
 {"id": 1527, "pt": "Bem, com este cérebro eletrônico, vencer é natural, robô~"}
-{"id": 1528, "pt": "Hihi,\\ndesculpe, tá?"}
+{"id": 1528, "pt": "Hihi,\ndesculpe, tá?"}
 {"id": 1529, "pt": "Heh, faltam 10 anos pra você, sô~"}
 {"id": 1530, "pt": "P-perdi, robô…"}
 {"id": 1531, "pt": "Nem com este cérebro eletrônico consegui ganhar…"}
 {"id": 1532, "pt": "Admito a derrota com honra, sô…"}
 {"id": 1533, "pt": "Empatou, miau~"}
-{"id": 1534, "pt": "Hum, foi uma disputa de igual nível, robô\\nFoi divertido, robô~"}
-{"id": 1535, "pt": "Droga~\\nEmpate, quase, pyon!"}
-{"id": 1536, "pt": "Ai ai~\\nEmpate amigável, né?"}
+{"id": 1534, "pt": "Hum, foi uma disputa de igual nível, robô\nFoi divertido, robô~"}
+{"id": 1535, "pt": "Droga~\nEmpate, quase, pyon!"}
+{"id": 1536, "pt": "Ai ai~\nEmpate amigável, né?"}
 {"id": 1537, "pt": "Por hoje ficou empate, sô…"}
 {"id": 1538, "pt": "Usar estas 2"}
 {"id": 1539, "pt": "Pegar a 3a"}
@@ -73,25 +73,25 @@
 {"id": 12980, "pt": "Passou de 10, volta a contar do 1"}
 {"id": 12981, "pt": "Entendi, é igual ao Oicho-Kabu de baralho, robô"}
 {"id": 12982, "pt": "Quero aprender sobre jogo de azar, croac"}
-{"id": 12983, "pt": "Eita~\\nJogo de azar leva à ruína, au~"}
+{"id": 12983, "pt": "Eita~\nJogo de azar leva à ruína, au~"}
 {"id": 12984, "pt": "Ruína, miau"}
 {"id": 12985, "pt": "Ter bens penhorados por dívida~"}
 {"id": 12986, "pt": "Ou se envolver com agiota~"}
-{"id": 12987, "pt": "Não, não,\\nnão é isso…"}
+{"id": 12987, "pt": "Não, não,\nnão é isso…"}
 {"id": 12988, "pt": "Instinto de disputa só se aprende na prática, sô"}
-{"id": 12989, "pt": "Pode ser!\\nCom o que a gente disputa, pyon?"}
+{"id": 12989, "pt": "Pode ser!\nCom o que a gente disputa, pyon?"}
 {"id": 12990, "pt": "Já que é pra disputar, quero valendo, pyon!"}
 {"id": 12991, "pt": "Uau, legal, miau~"}
-{"id": 12992, "pt": "Interessante!\\nAceito o desafio, croac!"}
-{"id": 12993, "pt": "Argh…\\n5 contra 1 e eu perdi, croac…"}
+{"id": 12992, "pt": "Interessante!\nAceito o desafio, croac!"}
+{"id": 12993, "pt": "Argh…\n5 contra 1 e eu perdi, croac…"}
 {"id": 12994, "pt": "Mesmo empatando, assim é derrota minha, sô…"}
 {"id": 12995, "pt": "Ou seja, a vitória é nossa, sô!"}
-{"id": 12996, "pt": "Tsc,\\nfazer o quê, pyon…"}
+{"id": 12996, "pt": "Tsc,\nfazer o quê, pyon…"}
 {"id": 12997, "pt": "Me diga o nome de um golpe especial, croac?"}
 {"id": 12998, "pt": "Golpe especial"}
-{"id": 12999, "pt": "Hehehe,\\ntente se for capaz, sô!"}
+{"id": 12999, "pt": "Hehehe,\ntente se for capaz, sô!"}
 {"id": 13000, "pt": "Eu não fujo nem me escondo, croac!"}
-{"id": 13001, "pt": "Então,\\ncomo combinado, vai obedecer o que eu mandar, né?"}
+{"id": 13001, "pt": "Então,\ncomo combinado, vai obedecer o que eu mandar, né?"}
 {"id": 13002, "pt": "O-o-o quê, sô?"}
 {"id": 13004, "pt": "O que é, pyon?"}
 {"id": 13005, "pt": "O que mais quero agora"}
@@ -105,24 +105,24 @@
 {"id": 1548, "pt": "Sentiu o poder do meu {16}{14:0001}{16} {16}{14:0002}{16}, sô?"}
 {"id": 1549, "pt": "Levou {16}{14:0001}{16} {16}{14:0002}{16} e ainda fica de pé, sô?"}
 {"id": 1550, "pt": "O ponto fraco de {16}{1d}{16} parece ser {16}{14:0000}{16}, sô!"}
-{"id": 1551, "pt": "Ai ai~\\n{16}{14:0001}{16} {16}{14:0002}{16} me acertou, miau~"}
-{"id": 1552, "pt": "{16}{14:0000}{16}, não dói?\\nTá bem? Tá bem?"}
+{"id": 1551, "pt": "Ai ai~\n{16}{14:0001}{16} {16}{14:0002}{16} me acertou, miau~"}
+{"id": 1552, "pt": "{16}{14:0000}{16}, não dói?\nTá bem? Tá bem?"}
 {"id": 1553, "pt": "A guarda de {16}{14:0000}{16} é fraca, robô~"}
 {"id": 1554, "pt": "Proteger {16}{14:0000}{16} é inútil, pyon"}
 {"id": 1555, "pt": "Sentiu o {16}{14:0001}{16} {16}{14:0002}{16} de {16}{1d}{16}~?"}
-{"id": 1556, "pt": "Heh…\\nA guarda de {16}{14:0000}{16} ainda é fraca, miau~"}
-{"id": 1557, "pt": "Proteger {16}{14:0000}{16}…\\nVocê é bom, sô!?"}
+{"id": 1556, "pt": "Heh…\nA guarda de {16}{14:0000}{16} ainda é fraca, miau~"}
+{"id": 1557, "pt": "Proteger {16}{14:0000}{16}…\nVocê é bom, sô!?"}
 {"id": 1558, "pt": "Meu ataque não acerta {16}{14:0000}{16}!?"}
-{"id": 1559, "pt": "O que foi isso, sô?\\nEsse {16}{14:0000}{16} agora?"}
+{"id": 1559, "pt": "O que foi isso, sô?\nEsse {16}{14:0000}{16} agora?"}
 {"id": 1560, "pt": "Nunca vi um {16}{14:0000}{16} assim, croac!"}
 {"id": 1561, "pt": "Proteger {16}{14:0000}{16}…"}
 {"id": 1562, "pt": "Parece que {16}{14:0000}{16} é muito importante, sô~"}
-{"id": 1563, "pt": "Defender {16}{14:0000}{16}…\\nNão esperava, croac…"}
-{"id": 1564, "pt": "Não consigo vencer, croac…\\nA defesa de {16}{14:0000}{16} é dura demais, sô…"}
-{"id": 1565, "pt": "I-impossível…\\nMeu ataque nem encosta em {16}{14:0000}{16}, sô…"}
+{"id": 1563, "pt": "Defender {16}{14:0000}{16}…\nNão esperava, croac…"}
+{"id": 1564, "pt": "Não consigo vencer, croac…\nA defesa de {16}{14:0000}{16} é dura demais, sô…"}
+{"id": 1565, "pt": "I-impossível…\nMeu ataque nem encosta em {16}{14:0000}{16}, sô…"}
 {"id": 1566, "pt": "Que {16}{14:0000}{16} veloz, robô"}
-{"id": 1567, "pt": "Nossa~\\nO {16}{14:0000}{16} de {16}{1d}{16} tem guarda dura, pyon"}
-{"id": 1568, "pt": "Ai ai~\\nNão imaginei que protegeria {16}{14:0000}{16}, au…"}
+{"id": 1567, "pt": "Nossa~\nO {16}{14:0000}{16} de {16}{1d}{16} tem guarda dura, pyon"}
+{"id": 1568, "pt": "Ai ai~\nNão imaginei que protegeria {16}{14:0000}{16}, au…"}
 {"id": 1569, "pt": "Ataque de {16}{1d}{16}, miau~"}
 {"id": 1570, "pt": "Ataque de {16}{1d}{16}, robô!"}
 {"id": 1571, "pt": "Ataque de {16}{1d}{16}, lá vou eu!"}
@@ -135,12 +135,12 @@
 {"id": 1578, "pt": "Com {16}{14:0000}{16} você não me derruba, sô!"}
 {"id": 1579, "pt": "Não tenho medo de {16}{14:0000}{16}, sô!"}
 {"id": 1580, "pt": "Por um fio, desviei de {16}{14:0000}{16}, croac!"}
-{"id": 1581, "pt": "Essa foi por pouco!\\nNão esperava {16}{14:0000}{16}, croac…"}
-{"id": 1582, "pt": "Heh…\\nJá li o {16}{14:0000}{16} de {16}{1d}{16}, croac!"}
+{"id": 1581, "pt": "Essa foi por pouco!\nNão esperava {16}{14:0000}{16}, croac…"}
+{"id": 1582, "pt": "Heh…\nJá li o {16}{14:0000}{16} de {16}{1d}{16}, croac!"}
 {"id": 1583, "pt": "Esse {16}{14:0000}{16} doeu bastante, sô…"}
 {"id": 1584, "pt": "Esse {16}{14:0000}{16} pesou, sô…"}
-{"id": 1585, "pt": "{16}{14:0000}{16}…\\nFui pego de surpresa, croac…"}
-{"id": 1586, "pt": "Incrível!\\nQue {16}{14:0000}{16} incrível, croac…"}
+{"id": 1585, "pt": "{16}{14:0000}{16}…\nFui pego de surpresa, croac…"}
+{"id": 1586, "pt": "Incrível!\nQue {16}{14:0000}{16} incrível, croac…"}
 {"id": 1587, "pt": "Não esperava que {16}{1d}{16} fosse tão craque em {16}{14:0000}{16}, croac…"}
 {"id": 1588, "pt": "O {16}{14:0000}{16} de {16}{1d}{16} é tão incrível assim…"}
 {"id": 1589, "pt": "{16}{14:0005}{16} deu certo!"}
@@ -148,7 +148,7 @@
 {"id": 1591, "pt": "{16}{14:0007}{16} de dano voltou para {16}{1d}{16}"}
 {"id": 1592, "pt": "{16}{1d}{16}, que pena, miau~"}
 {"id": 13011, "pt": "Mistérios de {16}{14:0003}{16}"}
-{"id": 13012, "pt": "É {16}{14:0003}{16}, miau~\\nQue aula será, miau~"}
-{"id": 13013, "pt": "{16}{1d}{16},\\nde repente assim, croac…"}
-{"id": 13014, "pt": "Não vai estudar\\n{16}{14:0003}{16}, miau?"}
-{"id": 13015, "pt": "Vai ficar com {16}{1d}{16}\\nsó pra você?"}
+{"id": 13012, "pt": "É {16}{14:0003}{16}, miau~\nQue aula será, miau~"}
+{"id": 13013, "pt": "{16}{1d}{16},\nde repente assim, croac…"}
+{"id": 13014, "pt": "Não vai estudar\n{16}{14:0003}{16}, miau?"}
+{"id": 13015, "pt": "Vai ficar com {16}{1d}{16}\nsó pra você?"}

@@ -17,10 +17,15 @@ ACCENTS = {
     "ó": 0x8589, "ô": 0x858A, "õ": 0x858B, "ú": 0x858F, "ü": 0x8591,
 }
 FROM_CODE = {v: k for k, v in ACCENTS.items()}
+# simbolos da fonte do jogo fora do Shift-JIS padrao. So entram no texto com extra=True: a lista de textos
+# (extract_all) foi numerada sem eles, e os textos com coracao vao para o fim dela
+EXTRA = {"♥": 0x8540}
+FROM_EXTRA = {v: k for k, v in EXTRA.items()}
 
 
-def to_text(raw):
-    """Bytes -> str. Levanta UnicodeDecodeError se houver 2 bytes fora do Shift-JIS e dos acentos."""
+def to_text(raw, extra=False):
+    """Bytes -> str. Levanta UnicodeDecodeError se houver 2 bytes fora do Shift-JIS e dos acentos (e, com
+    extra=True, dos simbolos de EXTRA)."""
     out, i = [], 0
     while i < len(raw):
         c = raw[i]
@@ -32,7 +37,12 @@ def to_text(raw):
             i += 1
         elif c >= 0x80:
             code = int.from_bytes(raw[i:i + 2], "big")
-            out.append(FROM_CODE[code] if code in FROM_CODE else raw[i:i + 2].decode("cp932"))
+            if code in FROM_CODE:
+                out.append(FROM_CODE[code])
+            elif extra and code in FROM_EXTRA:
+                out.append(FROM_EXTRA[code])
+            else:
+                out.append(raw[i:i + 2].decode("cp932"))
             i += 2
         else:
             out.append(chr(c))
@@ -56,6 +66,8 @@ def to_bytes(text):
             out += b"\x81\x60"  # o ~ ASCII pode virar sobrelinha na tabela JIS; usa o ～ japones
         elif ch in ACCENTS:
             out += ACCENTS[ch].to_bytes(2, "big")
+        elif ch in EXTRA:
+            out += EXTRA[ch].to_bytes(2, "big")
         else:
             out += ch.encode("cp932")
         i += 1

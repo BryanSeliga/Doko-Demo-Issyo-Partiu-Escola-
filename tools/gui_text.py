@@ -1,11 +1,13 @@
 """Rotulos de interface que sao imagens: nome do GIM (sem pasta e extensao) -> texto em portugues.
 Texto vazio apaga a imagem (pedaco que so continuava um titulo japones mais longo).
-Ficam como estao: KEY_SYS_KOUHO e KEY_SYS_SHOU (conversao de kana) e STATUS_DAY/ME/MONTH (pedacos da data)."""
+Ficam como estao: KEY_SYS_KOUHO e KEY_SYS_SHOU (conversao de kana)."""
 
 # Valem para qualquer pacote que tenha uma imagem com esse nome.
 COMMON = {
     # rodapes de navegacao
     "NW_BACK": "Voltar",
+    "NAVI_SELECT": "Mover",
+    "NAVI_MENU": "Menu",
     "NW_COS": "Fantasia",
     "NW_ENTRY": "Jogar",
     "NW_NEXT": "Próx.",
@@ -54,9 +56,9 @@ COMMON = {
     "MENU_NAME1_4": "Férias",
     "MENU_NAME1_5": "Entrada",
     "MENU_NAME1_6": "Formatura",
-    "MENU_NAME2": "Aula especial",
+    "MENU_NAME2": "Especial",
     "MENU_NAME4": "Lojinha",
-    "MENU_NAME5": "Sala de vídeo",
+    "MENU_NAME5": "Vídeo",
     "MENU_NAME6": "Professores",
     "MENU_NAME7": "Diretoria",
     # teclado
@@ -73,6 +75,10 @@ COMMON = {
     "STATUS_HOUKAGO": "Pós-aula",
     "STATUS_TOUKOU": "Chegada",
     "STATUS_YASUMI": "Recreio",
+    # data da barra de estado: as pecas vem depois dos numeros ("4 mes 1 dia"); "4/1" seria lido como 4 de janeiro
+    "STATUS_MONTH": "mês",
+    "STATUS_DAY": "dia",
+    "STATUS_ME": "",
     "TIME_KEIKA": "Tempo",
     "TIME_NOKORI": "Resta",
     # grade de horario
@@ -104,6 +110,18 @@ COMMON = {
 
 # Rotulos com desenho (seta, placa, faixa, circulo): so as letras sao trocadas (gui_render.relabel).
 SHAPES = {"PS_GOMARK", "CL_PRICET", "ST_BAR_ATTACK1", "ST_BAR_ATTACK2", "BGKC_NAFUDA"}
+
+# Botoes do menu e barra de estado: a textura e mais larga que a parte visivel, entao o texto fica na faixa
+# onde estava o japones (senao corta na borda ou invade o numero ao lado).
+KEEP_AREA = ("MENU_NAME", "STATUS_")
+
+# Cores fixas por prefixo do nome. Titulos das salas: letra branca com contorno rosa escuro (a letra rosa do
+# original se perdia na barra rosa e parecia um buraco; pedido do usuario).
+# O miolo fechado das letras (buraco do A, do O) fica rosa em vez de transparente (pedido do usuario).
+# "mes" encostava no numero do mes (a peca fica um pouco por cima dele): o texto vai mais para a direita
+STYLE = {"STATUS_MONTH": {"fill": (255, 255, 255), "outline": None, "area": (3, 16)},  # o jogo tinge de marrom
+         "STATUS_DAY": {"fill": (255, 255, 255), "outline": None},
+         "ROOM_TITLE_": {"fill": (255, 255, 255), "outline": (214, 72, 112), "holes": (240, 120, 160)}}
 
 # So no pacote indicado.
 BY_PACK = {

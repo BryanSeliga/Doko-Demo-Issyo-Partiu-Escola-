@@ -27,6 +27,21 @@ SCALE = 4
 
 # lanterna de festa com o kanji "matsuri" (festa): letras pretas de contorno branco sobre a cor da lanterna.
 # O lugar das letras recebe a cor lisa da lanterna (recompor puxava o branco do contorno e das ondas)
+def _disc(cx, cy, r):
+    """Linhas (y, x0, x1) de um disco: apaga o miolo de um carimbo redondo sem tocar no anel."""
+    out = []
+    for y in range(int(cy - r), int(cy + r) + 1):
+        dx = max(0.0, r * r - (y - cy) ** 2) ** 0.5
+        out.append((y, int(cx - dx + 0.5), int(cx + dx + 0.5)))
+    return out
+
+
+def _button_label(text, w):
+    """Rodape "icone + texto": apaga o texto branco depois do icone e escreve o novo no mesmo lugar."""
+    return {"size": (w, 32), "erase": [((18, 0, w, 17), ("all",))], "fill": (0, 0, 0, 0),
+            "texts": [{"lines": [text], "box": (19, 2, w - 2, 15), "color": (255, 255, 255)}]}
+
+
 def _not(color, d):
     """Tinta = tudo que se afasta da cor do fundo (pega tambem a borda suavizada do contorno)."""
     return lambda r, g, b, a: abs(r - color[0]) + abs(g - color[1]) + abs(b - color[2]) > d
@@ -76,6 +91,17 @@ SPECS = {
         "texts": [{"lines": ["Do fotógrafo"], "box": (62, 3, 180, 25), "color": (245, 245, 245)},
                   {"lines": ["Foto de hoje pra vocês, miau", "Vejam com carinho, miau!", "Depois vai pro álbum, miau"],
                    "box": (16, 40, 234, 120), "color": (246, 236, 2)}]},
+    # carimbo "sumi" (feito) do quadro de horarios: anel branco (o jogo pinta de vermelho) com o kanji dentro;
+    # o kanji sai (caixas dentro do anel) e entra "OK"
+    "GAME.BPM:TIME_SUMI_STAMP": {
+        "size": (32, 32),
+        "erase": [((x0, y, x1, y + 1), ("all",)) for y, x0, x1 in _disc(11, 11, 8.6)],
+        "fill": (0, 0, 0, 0),
+        "texts": [{"lines": ["OK"], "box": (4, 6, 19, 16), "color": (255, 255, 255)}]},
+    # rodapes com o icone do botao a esquerda (16 px) e o texto branco ao lado, fundo transparente
+    "GAME.BPM:NAVI_KETTEI": _button_label("OK", 64),
+    "GAME.BPM:NAVI_MODORU": _button_label("Voltar", 64),
+    "GAME.BPM:NAVI_COSPRE": _button_label("Escolher fantasia", 128),
     # nome no armario do clube
     "BG071_LOCKER_NAME01": {
         "erase": [((4, 2, 30, 12), ("dark", 200))], "fill": None,

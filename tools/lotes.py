@@ -126,7 +126,7 @@ def gerar(iso_path, fase):
         out = []
         for raw in group.values():
             try:
-                out.append(to_text(raw))
+                out.append(to_text(raw, extra=True))
             except (UnicodeDecodeError, KeyError):
                 out.append("")
         return out
@@ -194,6 +194,8 @@ def conferir(iso_path, paths):
                 problemas.append(f"{r['id']}: variaveis diferentes do original")
             if re.findall(r"\$[A-Za-z]+", it["jp"]) != re.findall(r"\$[A-Za-z]+", pt):  # \w pegaria o japones colado
                 problemas.append(f"{r['id']}: marcadores $ diferentes")
+            if chr(92) in pt:
+                problemas.append(f"{r['id']}: barra invertida (use a quebra de linha de verdade, nao barra-n)")
             if JP.search(TOKEN.sub("", pt)):
                 problemas.append(f"{r['id']}: sobrou japones")
             try:
