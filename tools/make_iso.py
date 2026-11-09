@@ -16,6 +16,7 @@ from gtext import TOKEN, to_bytes, to_text
 from iso_common import BOOT_LBA, BOOT_SIZE, Iso, bpm_files, inner_files, ksc_files
 from ksc import extract, reading_slots, rebuild
 import boot_text
+import defplay
 import gui_render
 import textures
 import title_logo
@@ -99,6 +100,8 @@ def main(src, dst):
     tfiles = {n: (o, s) for n, o, s in inner_files(iso, bpms["TITLE.BPM"][0])}
     title = title_logo.build(iso.bp(*tfiles[title_logo.LOGO[1]]), iso.bp(*tfiles[title_logo.BG[1]]))
     # rotulos de interface que sao imagens (botoes, rodapes, titulos das salas), no mesmo tamanho
+    # vocabulario inicial do Toro (palavras em portugues, leituras em kana)
+    title["DEFPLAYDATA.BIN"] = defplay.rebuild(iso.bp(*tfiles["DEFPLAYDATA.BIN"]))
     bpm = {"TITLE.BPM": title}
     # e texto desenhado no cenario (lanternas, placas, etiquetas, o bilhete do album)
     for (pack, name), data in {**gui_render.build_all(iso, bpms), **textures.build_all(iso, bpms)}.items():

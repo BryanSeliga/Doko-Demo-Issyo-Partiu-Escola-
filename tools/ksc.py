@@ -42,6 +42,14 @@ def reading_slots(d):
         if (tv[i - 2] == 0x90000010 and tv[i - 1] in (0x2000F024, 0x2000B024)
                 and tv[i] >> 28 == 5 and tv[i + 1] >> 28 == 5):
             out[i + 1] = tv[i + 1] & 0xFFFFFFF
+    # banco de provincias e especialidades (SHARE, MASA1, _CLUB_JAPAN): listas 0x90000003 (especialidade, leitura,
+    # registro) e 0x90000005 (leitura, nome da provincia, registros...). A leitura alimenta o Caderno e o Shiritori
+    for k in range(len(tv) - 3):
+        if tv[k + 1] >> 28 == 5 and tv[k + 2] >> 28 == 5 and tv[k + 3] >> 28 == 0xB:
+            if tv[k] == 0x90000003:
+                out[k + 2] = tv[k + 2] & 0xFFFFFFF
+            elif tv[k] == 0x90000005:
+                out[k + 1] = tv[k + 1] & 0xFFFFFFF
     return out
 
 
