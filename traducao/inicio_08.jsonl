@@ -38,7 +38,7 @@
 {"id": 9203, "pt": "Indisponível antes da\ncerimônia de entrada"}
 {"id": 9204, "pt": "Indisponível antes da\nformatura"}
 {"id": 100, "pt": "Nenhuma ☆ conquistada {16}{14:0009}{16}…"}
-{"id": 101, "pt": "Ganhei {16}{14:0001}{16} ☆ {16}{14:0009}{16}~!"}
+{"id": 101, "pt": "Ganhei {16}{14:0001}{16} ☆ {16}{14:0009}{16}!"}
 {"id": 7752, "pt": "Se não tem {16}{14:0002}{16}, é só comer bolo."}
 {"id": 7753, "pt": "Se não tem pão, é só comer {16}{14:0002}{16}."}
 {"id": 7754, "pt": "Não existe a palavra {16}{14:0002}{16} no meu dicionário."}
@@ -48,10 +48,10 @@
 {"id": 7762, "pt": "Um ditado do mundo humano que usa {16}{1d}{16} é…"}
 {"id": 7763, "pt": "Hmm, hmm…\n{16}{1d}{16}, miau…"}
 {"id": 7764, "pt": "by {16}{1d}{16}?"}
-{"id": 7765, "pt": "Me ensina {16}{14:0005}{16}, miau~"}
+{"id": 7765, "pt": "Me ensina {16}{14:0005}{16}, miau"}
 {"id": 7766, "pt": "Gostaria de aprender coisas como {16}{14:0005}{16}, robô"}
 {"id": 7767, "pt": "Queria aprender coisas tipo {16}{14:0005}{16}, pyon"}
-{"id": 7768, "pt": "Gostaria de aprender {16}{14:0005}{16}, meu bem, au~"}
+{"id": 7768, "pt": "Gostaria de aprender {16}{14:0005}{16}, meu bem, au"}
 {"id": 7769, "pt": "Queria aprender coisa tipo {16}{14:0005}{16}, sô"}
 {"id": 7770, "pt": "Pedido: {16}{14:0005}{16}"}
 {"id": 7771, "pt": "Palavra de shiritori com \"{16}{14:0001}{16}\" de {16}{14:0000}{16}"}
@@ -62,24 +62,24 @@
 {"id": 7775, "pt": "Não me ensinaram nenhuma palavra nova {16}{14:0001}{16}…"}
 {"id": 7776, "pt": "Aprendi {16}{14:0000}{16} palavra(s) nova(s) {16}{14:0001}{16}!"}
 {"id": 7777, "pt": "Palavra de shiritori com \"{16}{14:000b}{16}\" de {16}{14:0007}{16}"}
-{"id": 2111, "pt": "Aproveitando {16}{14:0003}{16}: {16}{14:0004}{16}, miau~"}
+{"id": 2111, "pt": "Aproveitando {16}{14:0003}{16}: {16}{14:0004}{16}, miau"}
 {"id": 2112, "pt": "Aproveitar para {16}{14:0004}{16}"}
 {"id": 2113, "pt": "Quando {16}{1d}{16} virar gente…"}
 {"id": 2114, "pt": "O ritmo de {16}{14:0003}{16} é surpreendentemente rápido, robô"}
 {"id": 2115, "pt": "Instigar {16}{14:0003}{16} para que faça {16}{14:0004}{16}, robô"}
 {"id": 2116, "pt": "Instigar para fazer {16}{14:0004}{16}"}
 {"id": 2117, "pt": "Na real, dá para viver sem {16}{14:0003}{16}, pyon"}
-{"id": 2118, "pt": "Sem {16}{14:0003}{16}, {16}{1d}{16} morreria, au~"}
+{"id": 2118, "pt": "Sem {16}{14:0003}{16}, {16}{1d}{16} morreria, au"}
 {"id": 2119, "pt": "Quando eu vi, já estava em {16}{14:0003}{16}, au"}
 {"id": 2120, "pt": "Derrube {16}{14:0003}{16}, ruge o vermelho vivo!"}
 {"id": 2121, "pt": "Ih, o coração de {16}{1d}{16} se acalmou, pyon"}
 {"id": 2122, "pt": "Fazer uma escola nos moldes de {16}{14:0003}{16}"}
-{"id": 2123, "pt": "Quero {16}{14:0003}{16} agora mesmo, sô~"}
+{"id": 2123, "pt": "Quero {16}{14:0003}{16} agora mesmo, sô"}
 {"id": 2124, "pt": "Cala a boca! Faz {16}{14:0003}{16} sem mim, pyon"}
 {"id": 2125, "pt": "Cheio de energia para investir, quero {16}{14:0003}{16}"}
-{"id": 2126, "pt": "Pôr {16}{14:0003}{16} em panelada fica gostoso, né~?"}
+{"id": 2126, "pt": "Pôr {16}{14:0003}{16} em panelada fica gostoso, né?"}
 {"id": 2127, "pt": "Raspar o fundo da panela de {16}{14:0003}{16}"}
-{"id": 2128, "pt": "Falando nisso, outro dia fui a {16}{14:0003}{16}, au~"}
+{"id": 2128, "pt": "Falando nisso, outro dia fui a {16}{14:0003}{16}, au"}
 {"id": 2129, "pt": "Conta direitinho como é {16}{14:0003}{16}!"}
 {"id": 2130, "pt": "Falar de {16}{14:0003}{16} em detalhes"}
 {"id": 2131, "pt": "Outro dia, fazendo {16}{14:0003}{16} no banho, eu escorreguei, miau"}
@@ -90,57 +90,57 @@
 {"id": 2136, "pt": "Queria questionar as verdadeiras intenções de {16}{14:0003}{16}, usa"}
 {"id": 2137, "pt": "Questionar as intenções de {16}{14:0003}{16}"}
 {"id": 2138, "pt": "Dizendo que de agora em diante vai fazer {16}{14:0004}{16}…"}
-{"id": 2139, "pt": "Outro dia {16}{14:0003}{16} apareceu na TV, então gravei, au~"}
+{"id": 2139, "pt": "Outro dia {16}{14:0003}{16} apareceu na TV, então gravei, au"}
 {"id": 2140, "pt": "{16}{1d}{16}? Quer ver?"}
-{"id": 2141, "pt": "Coisas importantes como {16}{14:0003}{16} a gente enterra e esconde, miau~"}
-{"id": 2142, "pt": "Por mais que enterre, {16}{1d}{16} vai desenterrar, au~"}
+{"id": 2141, "pt": "Coisas importantes como {16}{14:0003}{16} a gente enterra e esconde, miau"}
+{"id": 2142, "pt": "Por mais que enterre, {16}{1d}{16} vai desenterrar, au"}
 {"id": 2143, "pt": "Cavar a terra e desenterrar {16}{14:0003}{16}"}
-{"id": 2144, "pt": "Outro dia eu fiz {16}{14:0003}{16}, miau~"}
+{"id": 2144, "pt": "Outro dia eu fiz {16}{14:0003}{16}, miau"}
 {"id": 2145, "pt": "Falar de {16}{14:0003}{16} pegando o ponto principal"}
 {"id": 2146, "pt": "Se fizer {16}{14:0003}{16} de madrugada…"}
-{"id": 2147, "pt": "O frio pegou em {16}{14:0004}{16} e não consigo fazer direito, miau~"}
+{"id": 2147, "pt": "O frio pegou em {16}{14:0004}{16} e não consigo fazer direito, miau"}
 {"id": 2148, "pt": "Por que fazer {16}{14:0003}{16} de madrugada, hein?"}
 {"id": 2149, "pt": "O frio entorpece {16}{14:0004}{16}"}
-{"id": 2150, "pt": "Uoooh~! Quero {16}{14:0003}{16} agora mesmo, sô!"}
-{"id": 2151, "pt": "O sangue de {16}{14:0003}{16} dentro de mim tá fervendo, croac~"}
+{"id": 2150, "pt": "Uoooh! Quero {16}{14:0003}{16} agora mesmo, sô!"}
+{"id": 2151, "pt": "O sangue de {16}{14:0003}{16} dentro de mim tá fervendo, croac"}
 {"id": 2152, "pt": "Cala a boca! Se for fazer {16}{14:0003}{16}, faz depois, pyon"}
 {"id": 2153, "pt": "O sangue de {16}{14:0003}{16} ferve"}
 {"id": 2154, "pt": "Comprei {16}{14:0003}{16} outro dia e veio com defeito, pyon"}
 {"id": 2155, "pt": "De desculpas, me deram {16}{14:0004}{16} de brinde também, usa"}
-{"id": 2156, "pt": "Apesar da aparência, {16}{1d}{16} é bem astuto, au~"}
+{"id": 2156, "pt": "Apesar da aparência, {16}{1d}{16} é bem astuto, au"}
 {"id": 2157, "pt": "Falando nisso, emprestei {16}{14:0003}{16} para {16}{1d}{16} e nunca voltou, pyon"}
 {"id": 2158, "pt": "Este humilde que vos fala ainda está com {16}{14:0003}{16} emprestado…"}
 {"id": 2159, "pt": "Não devolver até {16}{1d}{16}-sama cobrar é imperdoável, robô…"}
 {"id": 2160, "pt": "Outro dia fui a {16}{14:0003}{16}, au"}
-{"id": 2161, "pt": "Era uma paisagem como {16}{14:0004}{16}, au~"}
+{"id": 2161, "pt": "Era uma paisagem como {16}{14:0004}{16}, au"}
 {"id": 2162, "pt": "Não tem {16}{14:0005}{16} de lembrança, miau?"}
-{"id": 2163, "pt": "Hmm…\nAcho que tinha {16}{14:0006}{16}~"}
+{"id": 2163, "pt": "Hmm…\nAcho que tinha {16}{14:0006}{16}"}
 {"id": 2164, "pt": "Como se fosse uma paisagem de {16}{14:0004}{16}"}
-{"id": 2165, "pt": "Outro dia ganhei {16}{14:0003}{16} num sorteio de revista, au~"}
+{"id": 2165, "pt": "Outro dia ganhei {16}{14:0003}{16} num sorteio de revista, au"}
 {"id": 2166, "pt": "E antes disso ganhei {16}{14:0004}{16} também…"}
 {"id": 2167, "pt": "{16}{1d}{16} tem muita sorte, au"}
 {"id": 2168, "pt": "Pegando a sorte de {16}{1d}{16}, eu também quero ganhar {16}{14:0005}{16}, croac"}
 {"id": 2169, "pt": "Tirar proveito da sorte de {16}{1d}{16}"}
 {"id": 2170, "pt": "Mesmo com cara de nada, {16}{14:0003}{16} manda bem em {16}{14:0004}{16}, miau"}
 {"id": 2171, "pt": "E também gosta de fazer {16}{14:0005}{16} para os outros, dizem, miau"}
-{"id": 2172, "pt": "Que inveja~ Queria que {16}{14:0003}{16} viesse casar comigo, pyon!"}
+{"id": 2172, "pt": "Que inveja… Queria que {16}{14:0003}{16} viesse casar comigo, pyon!"}
 {"id": 2173, "pt": "Então {16}{1d}{16} vai tomar {16}{14:0003}{16} como esposa, sô"}
 {"id": 2174, "pt": "Tomar {16}{14:0003}{16} como esposa"}
-{"id": 2175, "pt": "Gastar dinheiro com {16}{14:0003}{16} não dá, au~"}
-{"id": 2176, "pt": "{16}{14:0004}{16} eu até compro, se for pela metade do preço~"}
-{"id": 2177, "pt": "Será que não tem jeito de vencer {16}{14:0003}{16} forte, sô~?"}
+{"id": 2175, "pt": "Gastar dinheiro com {16}{14:0003}{16} não dá, au"}
+{"id": 2176, "pt": "{16}{14:0004}{16} eu até compro, se for pela metade do preço"}
+{"id": 2177, "pt": "Será que não tem jeito de vencer {16}{14:0003}{16} forte, sô?"}
 {"id": 2178, "pt": "{16}{1d}{16} conhece um jeito bom, miau"}
 {"id": 2179, "pt": "É fazer cócegas em {16}{14:0004}{16}, miau"}
 {"id": 2180, "pt": "{16}{14:0003}{16} é fraco em {16}{14:0004}{16}, miau"}
 {"id": 2181, "pt": "Foi burrice minha perguntar para {16}{1d}{16}, croac"}
 {"id": 2182, "pt": "Fazer cócegas em {16}{14:0004}{16}"}
-{"id": 2183, "pt": "{16}{1d}{16} é ruim em {16}{14:0003}{16}, né~"}
-{"id": 2184, "pt": "E também é ruim em {16}{14:0004}{16}~"}
+{"id": 2183, "pt": "{16}{1d}{16} é ruim em {16}{14:0003}{16}, né"}
+{"id": 2184, "pt": "E também é ruim em {16}{14:0004}{16}"}
 {"id": 2185, "pt": "{16}{1d}{16} é bem desajeitado, pyon"}
 {"id": 2186, "pt": "Não precisa falar assim de {16}{1d}{16}…"}
 {"id": 2187, "pt": "Criticar o jeito desajeitado de {16}{1d}{16}"}
-{"id": 2188, "pt": "100 vezes {16}{14:0003}{16}, croac~"}
-{"id": 2189, "pt": "E mais 100 vezes {16}{14:0004}{16}, sô~"}
-{"id": 2190, "pt": "O treino puxado de {16}{1d}{16} começou, miau~"}
+{"id": 2188, "pt": "100 vezes {16}{14:0003}{16}, croac"}
+{"id": 2189, "pt": "E mais 100 vezes {16}{14:0004}{16}, sô"}
+{"id": 2190, "pt": "O treino puxado de {16}{1d}{16} começou, miau"}
 {"id": 2191, "pt": "Ser treinado com rigor por {16}{1d}{16} no clube"}
-{"id": 2192, "pt": "Fazer {16}{14:0003}{16} com pressa dá errado, miau~"}
+{"id": 2192, "pt": "Fazer {16}{14:0003}{16} com pressa dá errado, miau"}

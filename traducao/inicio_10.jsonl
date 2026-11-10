@@ -96,15 +96,15 @@
 {"id": 7950, "pt": "Ensinar outra"}
 {"id": 7951, "pt": "Oba!"}
 {"id": 7952, "pt": "Eba!"}
-{"id": 7953, "pt": "Valeu, miau~"}
+{"id": 7953, "pt": "Valeu, miau"}
 {"id": 7954, "pt": "Obrigado, robô"}
 {"id": 7955, "pt": "Gratidão, robô"}
 {"id": 7956, "pt": "Valeu, robô"}
-{"id": 7957, "pt": "Iuhuu~!"}
-{"id": 7958, "pt": "Eba~!"}
+{"id": 7957, "pt": "Iuhuu!"}
+{"id": 7958, "pt": "Eba!"}
 {"id": 7959, "pt": "Valeu, pyon"}
-{"id": 7960, "pt": "Uhuu~"}
-{"id": 7961, "pt": "Que alegria, au~"}
+{"id": 7960, "pt": "Uhuu"}
+{"id": 7961, "pt": "Que alegria, au"}
 {"id": 7962, "pt": "Eba, sô!"}
 {"id": 7963, "pt": "Obrigado, croac"}
 {"id": 7964, "pt": "O que é, miau?"}
@@ -117,10 +117,10 @@
 {"id": 7969, "pt": "Bônus de combo de shiritori"}
 {"id": 2999, "pt": "Combo shiritori"}
 {"id": 7970, "pt": "Palavra com essa inicial"}
-{"id": 7971, "pt": "Me ensina mais, miau~"}
+{"id": 7971, "pt": "Me ensina mais, miau"}
 {"id": 7972, "pt": "Me ensine mais, robô"}
 {"id": 7973, "pt": "Me ensina mais, pyon"}
-{"id": 7974, "pt": "Quero mais, au~"}
+{"id": 7974, "pt": "Quero mais, au"}
 {"id": 7975, "pt": "Quero aprender mais, sô!"}
 {"id": 7976, "pt": "Palavra nova"}
 {"id": 7977, "pt": "Já chega"}
@@ -155,7 +155,7 @@
 {"id": 2248, "pt": "kachikachi"}
 {"id": 1979, "pt": "viatura"}
 {"id": 2249, "pt": "Mesmo se a gente apostar corrida no \"já!\"…"}
-{"id": 2250, "pt": "Num instante eu fico pra trás, sô~"}
+{"id": 2250, "pt": "Num instante eu fico pra trás, sô"}
 {"id": 2251, "pt": "Ser deixado pra trás num instante"}
 {"id": 2252, "pt": "incitar"}
 {"id": 2253, "pt": "sosonokasu"}
@@ -164,7 +164,7 @@
 {"id": 2256, "pt": "nagekawasu"}
 {"id": 2257, "pt": "kumikawasu"}
 {"id": 2258, "pt": "casamento"}
-{"id": 2259, "pt": "Nossa…\nQue maldade~"}
+{"id": 2259, "pt": "Nossa…\nQue maldade"}
 {"id": 2260, "pt": "perfurar"}
 {"id": 2261, "pt": "ugatsu"}
 {"id": 2262, "pt": "hanatsu"}
@@ -172,7 +172,7 @@
 {"id": 2264, "pt": "utsutsu"}
 {"id": 2265, "pt": "katsu"}
 {"id": 2266, "pt": "Se a gente olhar por um ângulo mais sutil…"}
-{"id": 2267, "pt": "Não é nada disso, au~"}
+{"id": 2267, "pt": "Não é nada disso, au"}
 {"id": 2268, "pt": "Olhar sutil"}
 {"id": 2269, "pt": "deixar de lado"}
 {"id": 2270, "pt": "oku"}
@@ -230,7 +230,7 @@
 {"id": 2322, "pt": "panela"}
 {"id": 2323, "pt": "panela"}
 {"id": 2324, "pt": "panela"}
-{"id": 2325, "pt": "É mesmo, sô~\nSem querer…"}
+{"id": 2325, "pt": "É mesmo, sô\nSem querer…"}
 {"id": 2326, "pt": "A gente raspa o fundo da panela e come até a última gota, croac"}
 {"id": 2327, "pt": "em detalhes"}
 {"id": 2328, "pt": "tsubusani"}
@@ -246,7 +246,7 @@
 {"id": 2337, "pt": "negirau"}
 {"id": 1452, "pt": "beijo"}
 {"id": 1854, "pt": "passeio"}
-{"id": 2338, "pt": "Para de ficar apontando cada erro do passado, sô~"}
+{"id": 2338, "pt": "Para de ficar apontando cada erro do passado, sô"}
 {"id": 2339, "pt": "Apontar erros"}
 {"id": 2340, "pt": "interrogar"}
 {"id": 2341, "pt": "tadasu"}
@@ -268,8 +268,8 @@
 {"id": 2357, "pt": "yurusenai"}
 {"id": 2358, "pt": "gomen nasai"}
 {"id": 2359, "pt": "ayamaranai"}
-{"id": 2360, "pt": "Num instante~!"}
-{"id": 2361, "pt": "Puxa~\nTô muito agradecido, sô"}
+{"id": 2360, "pt": "Num instante!"}
+{"id": 2361, "pt": "Puxa\nTô muito agradecido, sô"}
 {"id": 2362, "pt": "Grato, obrigado"}
 {"id": 2363, "pt": "demorar"}
 {"id": 2364, "pt": "nazumu"}
@@ -344,7 +344,7 @@
 {"id": 2433, "pt": "kezuru"}
 {"id": 2434, "pt": "nameru"}
 {"id": 1672, "pt": "travesseiro"}
-{"id": 2435, "pt": "Ahh~\nQue inveja, sô~"}
+{"id": 2435, "pt": "Ahh\nQue inveja, sô"}
 {"id": 2436, "pt": "casar-se com"}
 {"id": 2437, "pt": "metoru"}
 {"id": 2438, "pt": "naguru"}
@@ -382,7 +382,7 @@
 {"id": 2468, "pt": "ezuku"}
 {"id": 2469, "pt": "ugomeku"}
 {"id": 2470, "pt": "A atividade do clube hoje vai ficar assim mesmo…"}
-{"id": 2471, "pt": "Hã~?!"}
+{"id": 2471, "pt": "Hã?!"}
 {"id": 2472, "pt": "devagar"}
 {"id": 2473, "pt": "omomuroni"}
 {"id": 2474, "pt": "shidaini"}
@@ -395,8 +395,8 @@
 {"id": 2481, "pt": "nasakenaku"}
 {"id": 2482, "pt": "sasayaku"}
 {"id": 2483, "pt": "Quando o armário tá um pouquinho aberto, dá medo, miau…"}
-{"id": 2484, "pt": "Que medo, sô~"}
-{"id": 2485, "pt": "Eu tremo de medo, au~"}
+{"id": 2484, "pt": "Que medo, sô"}
+{"id": 2485, "pt": "Eu tremo de medo, au"}
 {"id": 2486, "pt": "conseguir"}
 {"id": 2487, "pt": "atau"}
 {"id": 2488, "pt": "mau"}
@@ -407,7 +407,7 @@
 {"id": 2493, "pt": "ayauku"}
 {"id": 2494, "pt": "tachinoku"}
 {"id": 2495, "pt": "shiritori"}
-{"id": 2496, "pt": "Cansei, miau~"}
+{"id": 2496, "pt": "Cansei, miau"}
 {"id": 2497, "pt": "soluçar"}
 {"id": 2498, "pt": "museubu"}
 {"id": 2499, "pt": "sakebu"}
@@ -434,7 +434,7 @@
 {"id": 2520, "pt": "sorazorashii"}
 {"id": 2521, "pt": "nas montanhas"}
 {"id": 2522, "pt": "vespão"}
-{"id": 2523, "pt": "Que medo~!"}
+{"id": 2523, "pt": "Que medo!"}
 {"id": 2524, "pt": "às vezes"}
 {"id": 2525, "pt": "mareni"}
 {"id": 2526, "pt": "tsuini"}
@@ -450,7 +450,7 @@
 {"id": 2536, "pt": "atarashime"}
 {"id": 2537, "pt": "naname"}
 {"id": 2538, "pt": "lápis"}
-{"id": 2539, "pt": "Se durmo até o último segundo de manhã, acordo correndo, miau~"}
+{"id": 2539, "pt": "Se durmo até o último segundo de manhã, acordo correndo, miau"}
 {"id": 2540, "pt": "Por isso, sem querer…"}
 {"id": 2541, "pt": "Nessas horas, é bom deixar tudo pronto na noite anterior, au."}
 {"id": 1478, "pt": "Quantos você consegue ler?"}

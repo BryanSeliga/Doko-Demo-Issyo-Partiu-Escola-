@@ -34,12 +34,12 @@
 {"id": 11981, "pt": "Qual foi a parte do corpo que mais doeu, robô?"}
 {"id": 11982, "pt": "Ferido em acidente de trânsito…\nMachucar dói, pyon…"}
 {"id": 11983, "pt": "Qual foi a parte do corpo que mais doeu, usa?"}
-{"id": 11984, "pt": "Ferido em acidente de trânsito…\nMachucar dói, au~…"}
+{"id": 11984, "pt": "Ferido em acidente de trânsito…\nMachucar dói, au…"}
 {"id": 11985, "pt": "Qual foi a parte do corpo que mais doeu, será?"}
 {"id": 11986, "pt": "Ferido em acidente de trânsito…\nMachucar dói, sô…"}
 {"id": 11987, "pt": "Qual foi a parte do corpo que mais doeu, croac?"}
 {"id": 11988, "pt": "Qual parte do corpo doeu mais em todos os machucados que você já teve?"}
-{"id": 11989, "pt": "Miau~\nSerá que todo mundo foi internado, miau~"}
+{"id": 11989, "pt": "Miau\nSerá que todo mundo foi internado, miau"}
 {"id": 11990, "pt": "Agora todo mundo deve estar internado em emergência?"}
 {"id": 11991, "pt": "Agora todo mundo deve estar internado na UTI?"}
 {"id": 11992, "pt": "Agora todo mundo deve estar internado em cirurgia?"}
@@ -58,61 +58,61 @@
 {"id": 12005, "pt": "Que doenças existem no mundo, sô?"}
 {"id": 12006, "pt": "Que doenças existem no mundo?"}
 {"id": 12007, "pt": "Com muita febre…"}
-{"id": 12008, "pt": "Miau~\nQue coisa séria, miau~"}
+{"id": 12008, "pt": "Miau\nQue coisa séria, miau"}
 {"id": 12009, "pt": "Com uns 40 graus de febre…"}
 {"id": 12010, "pt": "Isso é gravíssimo, robô!"}
 {"id": 12011, "pt": "Com muita febre…"}
 {"id": 12012, "pt": "Nossa, tipo, é sério demais, pyon!"}
 {"id": 12013, "pt": "Agora sofrendo com febre alta…"}
-{"id": 12014, "pt": "É sério, au~!"}
+{"id": 12014, "pt": "É sério, au!"}
 {"id": 12015, "pt": "Sofrendo com febre alta…"}
-{"id": 12016, "pt": "É sério, croac~!"}
+{"id": 12016, "pt": "É sério, croac!"}
 {"id": 12017, "pt": "Que coisa séria?!"}
-{"id": 12018, "pt": "A gente tem que ir visitar~"}
+{"id": 12018, "pt": "A gente tem que ir visitar"}
 {"id": 12019, "pt": "Temos que levar algo nutritivo!"}
 {"id": 12020, "pt": "Aliás, que comida é nutritiva, miau?"}
 {"id": 12021, "pt": "É sério, robô?!"}
-{"id": 12022, "pt": "Então precisamos ir visitar~"}
+{"id": 12022, "pt": "Então precisamos ir visitar"}
 {"id": 12023, "pt": "Precisamos levar algo nutritivo, robô!"}
 {"id": 12024, "pt": "Aliás, que comida é nutritiva?"}
 {"id": 12025, "pt": "É sério, pyon?!"}
-{"id": 12026, "pt": "Será que é melhor ir visitar~?"}
+{"id": 12026, "pt": "Será que é melhor ir visitar?"}
 {"id": 12027, "pt": "A gente tem que levar algo nutritivo!"}
 {"id": 12028, "pt": "Aliás, que comida é nutritiva, pyon?"}
-{"id": 12029, "pt": "É sério, au~?!"}
+{"id": 12029, "pt": "É sério, au?!"}
 {"id": 12030, "pt": "Será que é melhor ir visitar?"}
 {"id": 12031, "pt": "Deveríamos levar algo nutritivo, né?"}
 {"id": 12032, "pt": "Aliás, que comida é nutritiva, hein?"}
-{"id": 12033, "pt": "É sério, croac~?!"}
+{"id": 12033, "pt": "É sério, croac?!"}
 {"id": 12034, "pt": "Tenho que ir visitar de qualquer jeito!"}
 {"id": 12035, "pt": "Precisamos de algo nutritivo, croac!"}
 {"id": 12036, "pt": "Aliás, que comida é nutritiva, sô?"}
 {"id": 12037, "pt": "Comida (ou bebida) nutritiva?"}
 {"id": 12038, "pt": "E o que mais é preciso para visitar…"}
 {"id": 12040, "pt": "Nessa hora\né educação física…"}
-{"id": 12041, "pt": "Como não chegavam,\nachei que era folga, miau~"}
+{"id": 12041, "pt": "Como não chegavam,\nachei que era folga, miau"}
 {"id": 12042, "pt": "Como não chegavam,\nachei que era folga, robô"}
 {"id": 12043, "pt": "Como não chegavam,\nachei que era folga, pyon"}
-{"id": 12044, "pt": "Como não chegavam,\nachei que era folga, au~"}
-{"id": 12045, "pt": "Como não chegavam,\nachei que era folga, croac~"}
+{"id": 12044, "pt": "Como não chegavam,\nachei que era folga, au"}
+{"id": 12045, "pt": "Como não chegavam,\nachei que era folga, croac"}
 {"id": 12046, "pt": "………Hã?"}
 {"id": 12047, "pt": "………Pátio?\n………Educação física?"}
 {"id": 12048, "pt": "Não pode ser!!"}
 {"id": 12049, "pt": "Não é, {16}{1d}{16}?"}
 {"id": 12050, "pt": "Aliás, o sonho de {16}{1d}{16} era virar humano, né?"}
-{"id": 12051, "pt": "Vou ser uma pessoa como {16}{14:0000}{16}, miau~"}
+{"id": 12051, "pt": "Vou ser uma pessoa como {16}{14:0000}{16}, miau"}
 {"id": 12052, "pt": "É como fazer {16}{14:0000}{16} de repente sem aquecimento, robô"}
 {"id": 12053, "pt": "Se eu virar osso, vou ser caldo de ramen de {16}{14:0000}{16}, miau"}
 {"id": 12054, "pt": "{16}{1d}{16} não é gostoso, miau!"}
 {"id": 12055, "pt": "Então, em vez de {16}{1d}{16}, que tal aprender com {16}{1d}{16}?"}
 {"id": 12056, "pt": "Já que o assunto é principalmente a anatomia de sapos e de {16}{14:0000}{16}, sô…"}
-{"id": 12057, "pt": "Aliás, {16}{14:0000}{16} e {16}{14:0001}{16} têm um formato assim, miau~"}
-{"id": 12058, "pt": "Então vamos perguntar algo a {16}{1d}{16}, robô~"}
+{"id": 12057, "pt": "Aliás, {16}{14:0000}{16} e {16}{14:0001}{16} têm um formato assim, miau"}
+{"id": 12058, "pt": "Então vamos perguntar algo a {16}{1d}{16}, robô"}
 {"id": 12059, "pt": "Entendi, {16}{14:0005}{16}…"}
 {"id": 12060, "pt": "{16}{14:0005}{16} é o ponto fraco, croac!"}
 {"id": 12061, "pt": "Quem sabe até o enorme {16}{14:0001}{16} que mora em {16}{14:0000}{16}…"}
 {"id": 12062, "pt": "Talvez um golpe em {16}{14:0005}{16} derrote, sô!"}
-{"id": 12063, "pt": "Onde fica {16}{14:0005}{16} nos humanos, miau~?"}
+{"id": 12063, "pt": "Onde fica {16}{14:0005}{16} nos humanos, miau?"}
 {"id": 12064, "pt": "Para o superpoderoso robô {16}{1d}{16}, achar {16}{14:0005}{16} é fácil, robô"}
 {"id": 12065, "pt": "Uau!\nDá para ver {16}{14:0005}{16} direitinho, miau!"}
 {"id": 12066, "pt": "Não saber onde fica {16}{14:0005}{16}, logo o superpoderoso robô {16}{1d}{16}!"}
@@ -133,7 +133,7 @@
 {"id": 12081, "pt": "Vamos colocar {16}{14:0000}{16} lado a lado também"}
 {"id": 12082, "pt": "Tamanho de {16}{14:0000}{16}"}
 {"id": 12083, "pt": "Já aprendi {16}{14:0005}{16} e já aprendi {16}{14:0015}{16}…"}
-{"id": 12084, "pt": "Como será a aparência de {16}{1d}{16} se virar humano~?"}
+{"id": 12084, "pt": "Como será a aparência de {16}{1d}{16} se virar humano?"}
 {"id": 12085, "pt": "E o rabo e as orelhas de {16}{1d}{16}, como ficam?"}
 {"id": 12086, "pt": "Simulei a aparência de {16}{1d}{16} como humano, robô!"}
 {"id": 12087, "pt": "Forma humana de {16}{1d}{16}"}
@@ -158,7 +158,7 @@
 {"id": 12105, "pt": "Calma!"}
 {"id": 12106, "pt": "Miau!"}
 {"id": 12107, "pt": "Para isso não acontecer, vamos estudar, robô"}
-{"id": 12108, "pt": "Então vamos começar a aula sobre o funcionamento do corpo humano, robô~"}
+{"id": 12108, "pt": "Então vamos começar a aula sobre o funcionamento do corpo humano, robô"}
 {"id": 12109, "pt": "Conhecer o corpo humano também dá vantagem em luta, croac"}
 {"id": 12110, "pt": "Pontos fracos e posição das juntas são conhecimento básico para lutador, sô"}
 {"id": 12111, "pt": "Bem, é que… o meu conhecimento…"}

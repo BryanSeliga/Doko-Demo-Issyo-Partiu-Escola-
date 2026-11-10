@@ -35,7 +35,7 @@
 {"id": 19696, "pt": "Aluno representante\nA coelha {16}{1d}{16}, pyon"}
 {"id": 19697, "pt": "Aluno representante\nO cachorro {16}{1d}{16}, au"}
 {"id": 19698, "pt": "Aluno representante\nO sapo {16}{1d}{16}, croac"}
-{"id": 19699, "pt": "Boas-vindas a {16}{1d}{16}"}
+{"id": 19699, "pt": "Boas-vindas à {16}{1d}{16}"}
 {"id": 175, "pt": "Outros"}
 {"id": 176, "pt": "Faz suspirar"}
 {"id": 177, "pt": "homem"}
@@ -390,7 +390,7 @@
 {"id": 545, "pt": "completo"}
 {"id": 554, "pt": "ra"}
 {"id": 555, "pt": "na"}
-{"id": 556, "pt": "~"}
+{"id": 556, "pt": "…"}
 {"id": 557, "pt": "su"}
 {"id": 558, "pt": "poucos filhos"}
 {"id": 559, "pt": "jogo"}
@@ -425,20 +425,20 @@
 {"id": 588, "pt": "Burburinho…\nBurburinho…"}
 {"id": 589, "pt": "?"}
 {"id": 590, "pt": "!"}
-{"id": 591, "pt": "~"}
-{"id": 592, "pt": "Sim~!"}
+{"id": 591, "pt": "…"}
+{"id": 592, "pt": "Sim!"}
 {"id": 593, "pt": "Sim"}
-{"id": 594, "pt": "Siim~"}
+{"id": 594, "pt": "Siim"}
 {"id": 595, "pt": "Sim!"}
 {"id": 596, "pt": "Sim, miau!"}
 {"id": 597, "pt": "Beleza!"}
-{"id": 598, "pt": "Siiim~"}
+{"id": 598, "pt": "Siiim"}
 {"id": 599, "pt": "E aí!"}
 {"id": 600, "pt": "Entendido, robô"}
 {"id": 601, "pt": "Upa\nUpa"}
 {"id": 602, "pt": "Hmm hmm"}
 {"id": 603, "pt": "Hum hum♪"}
-{"id": 604, "pt": "Croacroá~"}
+{"id": 604, "pt": "Croacroá"}
 {"id": 605, "pt": "Revista de moda"}
 {"id": 606, "pt": "Taro"}
 {"id": 607, "pt": "França"}
@@ -491,11 +491,11 @@
 {"id": 654, "pt": "Ah, tá…"}
 {"id": 655, "pt": "Uau"}
 {"id": 656, "pt": "Hmm…"}
-{"id": 657, "pt": "Entendi~"}
-{"id": 658, "pt": "Sacei~"}
+{"id": 657, "pt": "Entendi"}
+{"id": 658, "pt": "Sacei"}
 {"id": 659, "pt": "Hum"}
-{"id": 660, "pt": "Nossa~"}
-{"id": 661, "pt": "Croac~"}
+{"id": 660, "pt": "Nossa"}
+{"id": 661, "pt": "Croac"}
 {"id": 662, "pt": "Oh"}
 {"id": 663, "pt": "Hehe"}
 {"id": 664, "pt": "Eba\nMe elogiaram, miau"}
@@ -513,9 +513,9 @@
 {"id": 676, "pt": "Beleza!"}
 {"id": 677, "pt": "Isso aí!"}
 {"id": 678, "pt": "Ora?\nAcertei?"}
-{"id": 679, "pt": "Deixa comigo~"}
-{"id": 680, "pt": "Isso é fácil, au~"}
-{"id": 681, "pt": "Li no chute…\nMas acertei, croac~"}
+{"id": 679, "pt": "Deixa comigo"}
+{"id": 680, "pt": "Isso é fácil, au"}
+{"id": 681, "pt": "Li no chute…\nMas acertei, croac"}
 {"id": 682, "pt": "Croac?\nAcertei, sô!"}
 {"id": 683, "pt": "Consegui ler, croac!\nConsegui ler, croac!"}
 {"id": 684, "pt": "Voltar"}
@@ -526,12 +526,12 @@
 {"id": 689, "pt": "Já que estamos aqui, me ensine uma palavra nova"}
 {"id": 690, "pt": "Já que estamos aqui, uma palavra nova, por favor"}
 {"id": 691, "pt": "Já que estamos aqui, quero saber uma palavra nova"}
-{"id": 692, "pt": "Já que estamos aqui, me ensina uma palavra nova~"}
+{"id": 692, "pt": "Já que estamos aqui, me ensina uma palavra nova"}
 {"id": 693, "pt": "Me ensina outra, uki"}
 {"id": 694, "pt": "Me ensine outra"}
 {"id": 695, "pt": "Outra, por favor"}
 {"id": 696, "pt": "Me ensina outra"}
-{"id": 697, "pt": "Me ensina outra~"}
+{"id": 697, "pt": "Me ensina outra"}
 {"id": 698, "pt": "Gosto"}
 {"id": 699, "pt": "Não gosto"}
 {"id": 700, "pt": "Homem e mulher"}
