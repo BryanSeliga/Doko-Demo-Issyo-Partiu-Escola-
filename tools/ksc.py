@@ -53,12 +53,33 @@ def reading_slots(d):
     return out
 
 
-def rebuild(d, inline=None, pool=None, extra=None, table_new=None):
+def reading_pairs(d):
+    """{indice_da_leitura: (indice_da_palavra, indice_do_cabecalho ou None)} para os campos de reading_slots.
+    So os registros 0x90000010 tem cabecalho: nele o valor 0 sao as flags e o valor 0xE o codigo do primeiro
+    caractere da leitura, ja calculados (flag 0x1000 = leitura valida, 0x4000 = nao termina em N)."""
+    tv = table_values(d)
+    out = {}
+    for i in range(2, len(tv) - 1):
+        if (tv[i - 2] == 0x90000010 and tv[i - 1] in (0x2000F024, 0x2000B024)
+                and tv[i] >> 28 == 5 and tv[i + 1] >> 28 == 5):
+            out[i + 1] = (i, i - 2)
+    for k in range(len(tv) - 3):
+        if tv[k + 1] >> 28 == 5 and tv[k + 2] >> 28 == 5 and tv[k + 3] >> 28 == 0xB:
+            if tv[k] == 0x90000003:
+                out[k + 2] = (k + 1, None)
+            elif tv[k] == 0x90000005:
+                out[k + 1] = (k + 2, None)
+    return out
+
+
+def rebuild(d, inline=None, pool=None, extra=None, table_new=None, table_copy=None, table_val=None):
     """inline: {offset_da_instrucao: bytes novos}; pool: {offset_no_pool: bytes novos}.
     extra: strings novas acrescentadas no fim do pool; table_new: {indice_na_tabela: indice em extra} faz
-    aquela entrada (tag 5) da tabela apontar para a string nova."""
+    aquela entrada (tag 5) da tabela apontar para a string nova. table_copy: {indice: outro indice} faz a
+    entrada apontar para a mesma string da outra (tag 5); table_val: {indice: valor u32} grava o valor direto."""
     inline, pool = inline or {}, pool or {}
     extra, table_new = extra or [], table_new or {}
+    table_copy, table_val = table_copy or {}, table_val or {}
     ins = decode(d)
     stub = decode_stub(d)
     lay = layout(d)
@@ -131,8 +152,13 @@ def rebuild(d, inline=None, pool=None, extra=None, table_new=None):
 
     # 4) tabela
     table = bytearray(d[lay["table"]:])
-    for k, v in enumerate(table_values(d)):
-        if k in table_new:
+    tv = table_values(d)
+    for k, v in enumerate(tv):
+        if k in table_val:
+            struct.pack_into("<I", table, 4 * k, table_val[k])
+        elif k in table_copy:
+            struct.pack_into("<I", table, 4 * k, 0x50000000 | pmap[tv[table_copy[k]] & 0xFFFFFFF])
+        elif k in table_new:
             struct.pack_into("<I", table, 4 * k, 0x50000000 | extra_at[table_new[k]])
         elif v >> 28 in (5, 0xE):
             struct.pack_into("<I", table, 4 * k, (v & 0xF0000000) | pmap[v & 0xFFFFFFF])

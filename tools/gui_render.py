@@ -236,6 +236,12 @@ def build_all(iso, bpms):
             style = next((v for k, v in STYLE.items() if key.startswith(k)), None)
             # botoes do menu da escola: os de 128 px passavam da borda da tela quando nao estao escolhidos;
             # todos ficam com a largura dos de 64 px
+            if style and style.get("vertical"):  # rotulo em pe: escrito deitado e girado (le-se de baixo para cima)
+                w, h, rgba, _ = to_rgba(data)
+                fill, outline, bg = analyse(w, h, rgba)
+                out[(pack, name)] = write_gim(data, render_hi(text, h, w, fill, outline, bg).rotate(90, expand=True)
+                                              .resize((w, h), Image.LANCZOS))
+                continue
             hi = label_hi(data, text, max_w=56 if key.startswith("MENU_NAME") else None, keep_area=keep, style=style)
             if style and "holes" in style:
                 hi = fill_holes(hi, style["holes"])

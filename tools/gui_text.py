@@ -1,6 +1,6 @@
 """Rotulos de interface que sao imagens: nome do GIM (sem pasta e extensao) -> texto em portugues.
 Texto vazio apaga a imagem (pedaco que so continuava um titulo japones mais longo).
-Ficam como estao: KEY_SYS_KOUHO e KEY_SYS_SHOU (conversao de kana)."""
+Fica como esta: KEY_SYS_SHOU (tecla que deixa a ultima letra minuscula)."""
 
 # Valem para qualquer pacote que tenha uma imagem com esse nome.
 COMMON = {
@@ -67,6 +67,7 @@ COMMON = {
     "KEY_SYS_JAPANESE": "Kana",
     "KEY_SYS_KETTEI": "OK",
     "KEY_SYS_KIGOU": "Símb.",
+    "KEY_SYS_KOUHO": "Lista",  # lista de sugestoes ao lado do teclado, escrita em pe
     "KEY_SYS_ROME": "Romaji",
     "KEY_SYS_SAKUJYO": "Apagar",
     # barra de estado e cronometro
@@ -119,7 +120,8 @@ KEEP_AREA = ("MENU_NAME", "STATUS_")
 # original se perdia na barra rosa e parecia um buraco; pedido do usuario).
 # O miolo fechado das letras (buraco do A, do O) fica rosa em vez de transparente (pedido do usuario).
 # "mes" encostava no numero do mes (a peca fica um pouco por cima dele): o texto vai mais para a direita
-STYLE = {"STATUS_MONTH": {"fill": (255, 255, 255), "outline": None, "area": (3, 16)},  # o jogo tinge de marrom
+STYLE = {"KEY_SYS_KOUHO": {"vertical": True},
+         "STATUS_MONTH": {"fill": (255, 255, 255), "outline": None, "area": (3, 16)},  # o jogo tinge de marrom
          "STATUS_DAY": {"fill": (255, 255, 255), "outline": None},
          "ROOM_TITLE_": {"fill": (255, 255, 255), "outline": (214, 72, 112), "holes": (240, 120, 160)}}
 
@@ -132,8 +134,8 @@ BY_PACK = {
         "TT_SARU": "Vídeos extras",
         "TT_MOVIE": "Vídeos",
     },
-    # placar e caderno de palavras. As abas do caderno sao as colunas do silabario: as palavras continuam
-    # agrupadas pela leitura em kana, entao a aba leva o nome da coluna (A, Ka, Sa...) e nao uma letra latina
+    # placar e caderno de palavras. As 10 primeiras abas do caderno sao grupos de iniciais, os mesmos de
+    # shiritori_code.MEMO_GROUPS (o BOOT escolhe a aba pela primeira letra da palavra)
     "RECORD.BPM": {
         "TEXT00": "Histórico",
         "TEXT01": "Total",
@@ -147,8 +149,8 @@ BY_PACK = {
         "TEXTA2": "D",
         "TEXTA3": "Taxa",
         "TEXTA5": "un.",
-        "MEMO_WORD1": "A", "MEMO_WORD2": "Ka", "MEMO_WORD3": "Sa", "MEMO_WORD4": "Ta", "MEMO_WORD5": "Na",
-        "MEMO_WORD6": "Ha", "MEMO_WORD7": "Ma", "MEMO_WORD8": "Ya", "MEMO_WORD9": "Ra", "MEMO_WORD10": "Wa",
+        "MEMO_WORD1": "AB", "MEMO_WORD2": "C", "MEMO_WORD3": "DE", "MEMO_WORD4": "FG", "MEMO_WORD5": "H-K",
+        "MEMO_WORD6": "LM", "MEMO_WORD7": "NO", "MEMO_WORD8": "PQ", "MEMO_WORD9": "RS", "MEMO_WORD10": "T-Z",
         "MEMO_WORD12": "123",
         "MEMO_WORD13": "Data",
         "MEMO_WORD14": "Palavra",

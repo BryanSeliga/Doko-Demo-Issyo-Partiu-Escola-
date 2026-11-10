@@ -14,10 +14,12 @@ from build_iso import build
 from extract_all import collect
 from gtext import TOKEN, to_bytes, to_text
 from iso_common import BOOT_LBA, BOOT_SIZE, Iso, bpm_files, inner_files, ksc_files
-from ksc import extract, reading_slots, rebuild
+from ksc import extract, reading_pairs, reading_slots, rebuild
+from kscdis import table_values
 import boot_text
 import defplay
 import gui_render
+import shiritori_code
 import textures
 import title_logo
 
@@ -56,6 +58,7 @@ NAME_CALL_NEW = bytes.fromhex("8024 8003 8007 8bf103")
 
 
 def apply(d, pt):
+    d = shiritori_code.patch_script(d)  # ensinar palavra: a leitura de uma palavra em letras e ela mesma
     inline, pool = extract(d)
 
     def tr(group):
@@ -71,17 +74,28 @@ def apply(d, pt):
 
     new_inline, new_pool = tr(inline), tr(pool)
     if not new_inline and not new_pool:
-        return (d.replace(NAME_CALL, NAME_CALL_NEW) if NAME_CALL in d else None), 0
-    # leituras do dicionario do Shiritori ficam em kana: se o texto delas foi traduzido (a mesma string serve de
-    # palavra ou aparece em outro lugar), a leitura passa a apontar para uma copia do original
-    extra, table_new, copy_of = [], {}, {}
+        return d.replace(NAME_CALL, NAME_CALL_NEW), 0
+    # Leituras dos dicionarios (Shiritori, provincias): o jogo encadeia e agrupa as palavras por elas. Palavra
+    # traduzida: a leitura passa a ser a propria palavra (Shiritori por letras, ver shiritori_code), com as flags
+    # e o codigo do primeiro caractere do registro refeitos. Palavra sem traducao: a leitura fica em kana; se o
+    # texto dela foi traduzido em outro lugar, passa a apontar para uma copia do original
+    extra, table_new, copy_of, table_copy, table_val = [], {}, {}, {}, {}
+    tv, pairs = table_values(d), reading_pairs(d)
     for k, o in reading_slots(d).items():
-        if o in new_pool:
+        word, head = pairs[k]
+        raw = new_pool.get(tv[word] & 0xFFFFFFF)
+        vals = shiritori_code.record_values(tv[head + 1] if head is not None else 0, raw) if raw else None
+        if vals:
+            table_copy[k] = word
+            if head is not None:
+                table_val[head + 1], table_val[head + 15] = vals
+        elif o in new_pool:
             if o not in copy_of:
                 copy_of[o] = len(extra)
                 extra.append(pool[o])
             table_new[k] = copy_of[o]
-    return rebuild(d, new_inline, new_pool, extra, table_new).replace(NAME_CALL, NAME_CALL_NEW), len(new_inline) + len(new_pool)
+    out = rebuild(d, new_inline, new_pool, extra, table_new, table_copy, table_val)
+    return out.replace(NAME_CALL, NAME_CALL_NEW), len(new_inline) + len(new_pool)
 
 
 def main(src, dst):

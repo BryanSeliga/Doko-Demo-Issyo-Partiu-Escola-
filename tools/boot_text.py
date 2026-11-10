@@ -4,6 +4,7 @@ de kana do Shiritori (0xD5258-0xD539C) e a mensagem de depuracao de arquivo nao 
 import struct
 
 from gtext import to_bytes
+import shiritori_code
 
 # Shift-JIS desenhado com a fonte do sistema (acentos pelo JIS X 0213, como nos scripts)
 SJIS = {
@@ -98,6 +99,12 @@ UTF8 = {
 # valor de a2: 1 (ABC) quando o campo aceita letras latinas (nomes e palavras), 0 nos campos so de kana.
 CODE = {
     0x89868: (0xAC800290, 0xAC860290),  # sw zero, 0x290(a0) -> sw a2, 0x290(a0)
+    # Pagina de kana: o modo (0 = quadro de kana, 1 = Romaji) comeca no byte de preferencia 0xDDD38, que o
+    # jogo regrava quando o jogador troca. Passa a comecar em Romaji: a leitura das palavras ensinadas (campo
+    # so de kana) pode ser digitada com letras latinas
+    # A abertura do jogo zera 12 bytes a partir de 0xDDD30 (a preferencia e o byte 8): passa a zerar so 8
+    0xDDD38: (0x00000000, 0x00000001),
+    0x81EFC: (0x2406000C, 0x24060008),  # addiu a2, zero, 0xc -> addiu a2, zero, 8
 }
 CODE_FILE_OFFSET = 0x60
 
@@ -122,4 +129,5 @@ def patch_boot(boot):
         off = va + CODE_FILE_OFFSET
         assert struct.unpack_from("<I", boot, off)[0] == old, hex(va)
         struct.pack_into("<I", out, off, new)
+    shiritori_code.patch(out)  # Shiritori por letras: as tres funcoes de leitura
     return bytes(out)

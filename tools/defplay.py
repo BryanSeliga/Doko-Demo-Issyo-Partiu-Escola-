@@ -4,15 +4,19 @@ O arquivo e uma arvore de valores de 4 bytes com tag no nibble alto (9 = lista c
 lista, 6 = ponteiro para texto, 2 = inteiro), sem alinhamento. Cada palavra e uma lista 0x90000010: o valor 1 e a
 palavra, o valor 2 a leitura em kana (tag 6, offsets absolutos) e o valor 3 o tamanho da palavra em caracteres; os
 textos ficam logo depois da lista. Os 163 registros sao o nome "Toro" e as 162 palavras do gato, na mesma ordem do
-NEKO.DIC do Issyo (tools/dic.py de la), cuja traducao e reaproveitada aqui.
+NEKO.DIC do Issyo (tools/dic.py de la), cuja traducao e reaproveitada aqui. O mesmo arquivo traz os nomes padrao
+dos 5 Pokepi que aparecem no teclado do nome (NAMES).
 
-A leitura fica em kana: o jogo agrupa as palavras no Caderno e encadeia o Shiritori por ela. Como as palavras mudam
-de tamanho, o arquivo e remontado e todos os ponteiros (tags B e 6) sao corrigidos. O fim do arquivo (listas vazias
+O jogo agrupa as palavras no Caderno e encadeia o Shiritori pela leitura. Ela passa a ser a propria palavra em
+portugues (Shiritori por letras), e o registro guarda tambem, ja calculados, as flags (valor 0) e o codigo do
+primeiro caractere da leitura (valor 0xE). Como os textos mudam de tamanho, o arquivo e remontado e todos os
+ponteiros (tags B e 6) sao corrigidos. O fim do arquivo (listas vazias
 que nada referencia) so e deslocado. Vale para jogo novo: um save ja criado guarda as palavras de quando foi criado.
 """
 import bisect
 import struct
 
+import shiritori_code
 from gtext import to_bytes
 
 NEKO = [
@@ -41,6 +45,9 @@ NEKO = [
     "Prendedor", "Ábaco",
 ]
 WORDS = ["Toro"] + NEKO
+# Nomes padrao dos Pokepi no teclado do nome (lista apontada pelo valor 1 da raiz, 5 textos tag 6), na ordem do
+# arquivo. Os mesmos nomes das falas (traducao dos ids 6746-6750)
+NAMES = ["Toro", "Suzuki", "Jun", "Pierre", "Ricky"]
 NUL = bytes(1)
 
 
@@ -75,15 +82,30 @@ def word_records(d, lists):
             if n == 0x10 and u32(d, p + 8) >> 28 == 6 and u32(d, p + 12) >> 28 == 6]
 
 
-def rebuild(d, words=None):
-    words = words or WORDS
+def name_list(d, lists):
+    """Offset da lista dos nomes padrao dos Pokepi: valor 1 da raiz, uma lista so de textos (tag 6)."""
+    v = u32(d, 8)
+    assert v >> 28 == 0xB, hex(v)
+    p = v & 0xFFFFFFF
+    assert lists[p] == len(NAMES) and all(u32(d, p + 4 + 4 * k) >> 28 == 6 for k in range(lists[p])), hex(p)
+    return p
+
+
+def rebuild(d, words=None, names=None):
+    words, names = words or WORDS, names or NAMES
     lists, slots = parse(d)
     recs = word_records(d, lists)
     assert len(recs) == len(words), (len(recs), len(words))
-    # palavras em ordem de posicao: (inicio do texto, lista, palavra nova)
-    plan = sorted((u32(d, p + 8) & 0xFFFFFFF, p, w) for p, w in zip(recs, words))
+    nl = name_list(d, lists)
+    # textos em ordem de posicao: (inicio do texto, valor com o tamanho em caracteres ou None, texto novo)
+    plan = [(u32(d, p + 8) & 0xFFFFFFF, p + 16, w) for p, w in zip(recs, words)]
+    # a leitura passa a ser a propria palavra (Shiritori por letras, ver shiritori_code)
+    plan += [(u32(d, p + 12) & 0xFFFFFFF, None, w) for p, w in zip(recs, words)]
+    plan += [(u32(d, nl + 4 + 4 * k) & 0xFFFFFFF, None, w) for k, w in enumerate(names)]
+    plan.sort()
+    assert len({at for at, q, w in plan}) == len(plan)
     out, i, ends, shifts = bytearray(), 0, [], []
-    for at, p, w in plan:
+    for at, q, w in plan:
         end = d.index(NUL, at) + 1
         out += d[i:at] + to_bytes(w) + NUL
         i = end
@@ -98,7 +120,11 @@ def rebuild(d, words=None):
     for q in slots:
         v = u32(d, q)
         struct.pack_into("<I", out, moved(q), (v & 0xF0000000) | moved(v & 0xFFFFFFF))
-    for at, p, w in plan:
-        q = p + 16  # valor 3: tamanho da palavra em caracteres
-        struct.pack_into("<I", out, moved(q), (u32(d, q) & 0xF0000000) | len(w))
+    for at, q, w in plan:
+        if q is not None:  # valor 3 do registro de palavra: tamanho em caracteres
+            struct.pack_into("<I", out, moved(q), (u32(d, q) & 0xF0000000) | len(w))
+    for p, w in zip(recs, words):  # valor 0 = flags, valor 0xE = codigo do primeiro caractere da leitura
+        flags, first = shiritori_code.record_values(u32(d, p + 4), to_bytes(w))
+        struct.pack_into("<I", out, moved(p + 4), flags)
+        struct.pack_into("<I", out, moved(p + 4 + 4 * 0xE), first)
     return bytes(out)
