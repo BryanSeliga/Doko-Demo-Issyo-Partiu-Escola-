@@ -28,6 +28,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # sobrescreve a base do pool (+0x480) e o jogo trava. O maior texto original tem 265 bytes.
 MAX_BYTES = 600
 PT_DIR = os.environ.get("PT_DIR", os.path.join(HERE, "..", "traducao"))  # PT_DIR troca a pasta nos testes
+# Textos cuja traducao pode ter MENOS variaveis que o original (nunca outras). 2629: fala do Shiritori "palavra!
+# (leitura)"; a leitura agora e a propria palavra e so repetia o texto, entao a traducao mostra so a palavra.
+FEWER_VARS = {2629}
+
+
+def same_vars(row, jp):
+    """As variaveis da traducao sao as do original (nos textos de FEWER_VARS, parte delas, na mesma ordem)."""
+    a, b = TOKEN.findall(jp), TOKEN.findall(row["pt"])
+    if row["id"] in FEWER_VARS:
+        return 0 < len(b) <= len(a) and b == a[:len(b)]
+    return sorted(a) == sorted(b)
 
 
 def load_translations(items):
@@ -40,7 +51,7 @@ def load_translations(items):
                 continue
             row = json.loads(line)
             jp = by_id[row["id"]]
-            if sorted(TOKEN.findall(jp)) != sorted(TOKEN.findall(row["pt"])):
+            if not same_vars(row, jp):
                 bad.append(row["id"])
                 continue
             if len(to_bytes(row["pt"])) > MAX_BYTES:
@@ -55,6 +66,27 @@ def load_translations(items):
 # limite 4, e chama o sistema (8b f1 03). O limite passa a 7, como no Issyo: "Sophia" tem 6 letras.
 NAME_CALL = bytes.fromhex("8024 8003 8004 8bf103")
 NAME_CALL_NEW = bytes.fromhex("8024 8003 8007 8bf103")
+
+# Nome da escola. O jogo nao pede esse nome: no roteiro do diretor ele junta o nome de quem joga com um sufixo
+# ("K" + sufixo), e em portugues saia "KEscola". A ordem natural e a contraria ("Escola K", como "Escola Movel" e
+# "Escola Kuro"): os dois operandos da juncao trocam de lugar, o que nao muda o tamanho do codigo, e so neste
+# script o sufixo ganha um espaco no fim (o mesmo texto e palavra de vocabulario em outras aulas).
+#   95 00 00 80 1d f5   destino: campo 0x1d (nome da escola)
+#   95 00 00 85 f4      nome de quem joga         -> passa para depois do sufixo
+#   88 <pool>           sufixo
+#   e0 51               junta e guarda
+SCHOOL_KSC = "KOUCHOU1.KSC"
+SCHOOL_JOIN = re.compile(rb"(\x95\x00\x00\x80\x1d\xf5)(\x95\x00\x00\x85\xf4)(\x88...)(\xe0\x51)", re.S)
+SCHOOL_JP, SCHOOL_PT = "\u5b66\u6821", "Escola"
+
+
+def school_name(d, pt):
+    """(script com a juncao invertida, traducoes deste script com o sufixo seguido de espaco)."""
+    hits = list(SCHOOL_JOIN.finditer(d))
+    assert len(hits) == 1, len(hits)
+    m = hits[0]
+    assert pt.get(SCHOOL_JP) == SCHOOL_PT, pt.get(SCHOOL_JP)
+    return d[:m.start(2)] + m.group(3) + m.group(2) + d[m.end(3):], {**pt, SCHOOL_JP: SCHOOL_PT + " "}
 
 
 def apply(d, pt):
@@ -104,7 +136,10 @@ def main(src, dst):
     pt = load_translations(items)
     top, total = {}, 0
     for name, off, size in ksc_files(iso):
-        new, n = apply(iso.bp(off, size), pt)
+        d, ptk = iso.bp(off, size), pt
+        if name == SCHOOL_KSC:
+            d, ptk = school_name(d, pt)  # "Escola K" em vez de "KEscola"
+        new, n = apply(d, ptk)
         if new is not None:
             top[name] = new
             total += n

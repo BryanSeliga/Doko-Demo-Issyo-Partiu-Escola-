@@ -135,7 +135,8 @@ BY_PACK = {
         "TT_MOVIE": "Vídeos",
     },
     # placar e caderno de palavras. As 10 primeiras abas do caderno sao grupos de iniciais, os mesmos de
-    # shiritori_code.MEMO_GROUPS (o BOOT escolhe a aba pela primeira letra da palavra)
+    # shiritori_code.MEMO_GROUPS (o BOOT escolhe a aba pela primeira letra da palavra). A 11a aba era a das
+    # palavras em letras latinas ("ABC" no original); agora recebe as palavras em kana (saves antigos)
     "RECORD.BPM": {
         "TEXT00": "Histórico",
         "TEXT01": "Total",
@@ -151,6 +152,7 @@ BY_PACK = {
         "TEXTA5": "un.",
         "MEMO_WORD1": "AB", "MEMO_WORD2": "C", "MEMO_WORD3": "DE", "MEMO_WORD4": "FG", "MEMO_WORD5": "H-K",
         "MEMO_WORD6": "LM", "MEMO_WORD7": "NO", "MEMO_WORD8": "PQ", "MEMO_WORD9": "RS", "MEMO_WORD10": "T-Z",
+        "MEMO_WORD11": "Kana",
         "MEMO_WORD12": "123",
         "MEMO_WORD13": "Data",
         "MEMO_WORD14": "Palavra",

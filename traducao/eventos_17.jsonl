@@ -109,7 +109,7 @@
 {"id": 1893, "pt": "Bate-Toupeira: ativo"}
 {"id": 1894, "pt": "Bate-Toupeira\nForça"}
 {"id": 2225, "pt": "{16}{14:0004}{16} pontos"}
-{"id": 2226, "pt": "Aprender a ler muitos kanji difíceis para ganhar ☆, {16}{14:0006}{16}!"}
+{"id": 2226, "pt": "Aprender muitas palavras difíceis em japonês para ganhar ☆, {16}{14:0006}{16}!"}
 {"id": 2542, "pt": "Clube de Kanji\nativo"}
 {"id": 2543, "pt": "Clube de Kanji!\nForça"}
 {"id": 2547, "pt": "Bora entrar no fã-clube de {16}{14:0002}{16}"}
@@ -145,7 +145,7 @@
 {"id": 2611, "pt": "Preciso aprender mais palavras…"}
 {"id": 2612, "pt": "Hã?!"}
 {"id": 2613, "pt": "Terminou com \"n\", robô"}
-{"id": 2614, "pt": "Palavra que não termina em \"n\" (uma que ainda não foi ensinada)"}
+{"id": 2614, "pt": "Uma palavra que ainda não foi ensinada"}
 {"id": 2615, "pt": "Não sei…"}
 {"id": 2616, "pt": "Clube de Shiritori!\nForça"}
 {"id": 2617, "pt": "Fight-ô"}
@@ -153,14 +153,14 @@
 {"id": 2619, "pt": "{16}{1b:1227}{16} começa!"}
 {"id": 2620, "pt": "Ataque em combo\nduplo de {1d}!!"}
 {"id": 2621, "pt": "Ataque em combo\ntriplo de {1d}!!"}
-{"id": 2622, "pt": "{14:0003}… {14:0003}…\nPalavra que começa\ncom {14:0003}{1d}"}
+{"id": 2622, "pt": "{14:0003}… {14:0003}…\nPalavra com {14:0003}…\n{1d}"}
 {"id": 2623, "pt": "{14:0009} de dano!!"}
 {"id": 2624, "pt": "{1d} ficou sem forças"}
 {"id": 2625, "pt": "O poder de ataque\nde {1d} ficou {1b:1223}x maior!"}
 {"id": 2626, "pt": "Contra-ataque de {1d}?!"}
 {"id": 2627, "pt": "Recuperou {14:000b} ponto(s) de vida!"}
 {"id": 2628, "pt": "Nenhuma palavra começa com \"{16}{14:0004}{16}\"!!"}
-{"id": 2629, "pt": "{1d}!\n({1d})"}
+{"id": 2629, "pt": "{1d}!"}
 {"id": 2630, "pt": "Ganhou {14:0003} ☆"}
 {"id": 2631, "pt": "Ataque de {1b:1226}!"}
 {"id": 2632, "pt": "Ataque de {1b:1227}!"}

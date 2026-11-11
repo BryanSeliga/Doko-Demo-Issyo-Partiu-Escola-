@@ -29,7 +29,9 @@ SJIS = {
     0xD7540: "Esquece",
     0xD75CC: "Começar",
     0xD75D8: "Esquece",
-    0xD7610: "Fantasias",
+    # rotulo da fantasia na lista "Escolher Pokepi": o nome da fantasia e escrito logo depois, numa posicao
+    # fixa, e so cabem uns 5 caracteres antes dele ("Fantasias" aparecia cortado e por baixo do nome)
+    0xD7610: "Traje",
     0xD91A4: "★%d",
     # caderno de palavras
     0xD948C: "Apagar já",

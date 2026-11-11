@@ -165,7 +165,7 @@
 {"id": 12629, "pt": "{16}{1d}{16}, é hora do shiritori giratório, miau!"}
 {"id": 12630, "pt": "{16}{1d}{16}, você conhece as regras do shiritori giratório?"}
 {"id": 12631, "pt": "Ficar num pé só fazendo {16}{14:0000}{16} fortalece, croac"}
-{"id": 12632, "pt": "Palavras com 2 ou mais sílabas, que não terminem em \"n\""}
+{"id": 12632, "pt": "Palavras com 2 ou mais letras"}
 {"id": 12633, "pt": "Então vamos testar, miau"}
 {"id": 12634, "pt": "A primeira palavra pode ser qualquer uma, miau"}
 {"id": 12635, "pt": "Início"}
@@ -184,7 +184,7 @@
 {"id": 12648, "pt": "Não consigo\nNão sei, au"}
 {"id": 12649, "pt": "Não sei, sô"}
 {"id": 12650, "pt": "É o primeiro, então escolha qualquer palavra que goste!"}
-{"id": 12651, "pt": "Mas palavras de 1 sílaba ou que terminem em \"n\" não valem"}
+{"id": 12651, "pt": "Mas palavras de 1 letra só não valem"}
 {"id": 11298, "pt": "Passou do limite"}
 {"id": 2068, "pt": "Gol!"}
 {"id": 12652, "pt": "Terminou em \"n\""}
