@@ -66,6 +66,22 @@ def load_translations(items):
 # limite 4, e chama o sistema (8b f1 03). O limite passa a 7, como no Issyo: "Sophia" tem 6 letras.
 NAME_CALL = bytes.fromhex("8024 8003 8004 8bf103")
 NAME_CALL_NEW = bytes.fromhex("8024 8003 8007 8bf103")
+# O mesmo para o teclado das palavras ensinadas (tipo 1): o limite era 8 caracteres, que em kana sao 16 bytes.
+# Letras latinas ocupam 1 byte: os campos fixos do BOOT para a palavra tem 17 bytes e as copias para eles sao
+# limitadas e sempre terminam o texto (rotina 0xF5B8), e o teclado ja trabalha com limite 16 nos campos de
+# leitura (tipos 2 e 7). Com 16 letras o jogo funciona e o save abre, mas no Caderno a coluna da palavra so
+# comporta umas 11 letras largas e o texto passa por cima da leitura; por isso o limite fica em 12.
+WORD_CALL = bytes.fromhex("8024 85 8008 8bf103")
+WORD_CALL_NEW = bytes.fromhex("8024 85 800c 8bf103")
+# A chamada tem uma segunda forma, com um argumento a mais (8b f1 04), usada logo antes de abrir o teclado ao
+# ensinar uma palavra (cerca de uma por script); a de 3 argumentos devolve o limite ao padrao depois de trocas
+WORD_CALL4 = bytes.fromhex("8024 85 8008 8001 8bf104")
+WORD_CALL4_NEW = bytes.fromhex("8024 85 800c 8001 8bf104")
+
+
+def keyboard_limits(d):
+    d = d.replace(NAME_CALL, NAME_CALL_NEW)
+    return d.replace(WORD_CALL, WORD_CALL_NEW).replace(WORD_CALL4, WORD_CALL4_NEW)
 
 # Nome da escola. O jogo nao pede esse nome: no roteiro do diretor ele junta o nome de quem joga com um sufixo
 # ("K" + sufixo), e em portugues saia "KEscola". A ordem natural e a contraria ("Escola K", como "Escola Movel" e
@@ -106,7 +122,7 @@ def apply(d, pt):
 
     new_inline, new_pool = tr(inline), tr(pool)
     if not new_inline and not new_pool:
-        return d.replace(NAME_CALL, NAME_CALL_NEW), 0
+        return keyboard_limits(d), 0
     # Leituras dos dicionarios (Shiritori, provincias): o jogo encadeia e agrupa as palavras por elas. Palavra
     # traduzida: a leitura passa a ser a propria palavra (Shiritori por letras, ver shiritori_code), com as flags
     # e o codigo do primeiro caractere do registro refeitos. Palavra sem traducao: a leitura fica em kana; se o
@@ -127,7 +143,7 @@ def apply(d, pt):
                 extra.append(pool[o])
             table_new[k] = copy_of[o]
     out = rebuild(d, new_inline, new_pool, extra, table_new, table_copy, table_val)
-    return out.replace(NAME_CALL, NAME_CALL_NEW), len(new_inline) + len(new_pool)
+    return keyboard_limits(out), len(new_inline) + len(new_pool)
 
 
 def main(src, dst):
