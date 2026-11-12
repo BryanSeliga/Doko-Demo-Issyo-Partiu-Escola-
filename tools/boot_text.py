@@ -110,6 +110,22 @@ CODE = {
 }
 CODE_FILE_OFFSET = 0x60
 
+# Teclado, pagina de simbolos: 5 linhas de 10 teclas, um codigo de 16 bits por tecla (0 = casa vazia, 0x0E = a
+# tecla que deixa a ultima letra minuscula). As tres ultimas linhas tinham simbolos japoneses e 12 casas vazias;
+# passam a ter as letras acentuadas do portugues, que nao existiam em nenhuma pagina (so dava para ensinar "Pao").
+# Offset no arquivo -> (bytes originais, teclas novas).
+KEY_SMALL = "\x0e"
+KEYS = {
+    0xD00B4: ("5b81608145819c819b817e819981f4815c004581", "ÁÂÃÉÊÍÓÔÕÚ"),
+    0xD00C8: ("58813a003b002c002e003f002f00000000000000", "áâãéêíóôõú"),
+    0xD00DC: ("0e00000000000000000000000000000000000000", KEY_SMALL + "Çç☆:;,.?/"),
+}
+
+
+def key_code(ch):
+    raw = ch.encode("ascii") if ch == KEY_SMALL else to_bytes(ch)
+    return raw[0] if len(raw) == 1 else raw[0] << 8 | raw[1]
+
 
 def capacity(boot, off):
     end = boot.index(b"\0", off)
@@ -131,5 +147,8 @@ def patch_boot(boot):
         off = va + CODE_FILE_OFFSET
         assert struct.unpack_from("<I", boot, off)[0] == old, hex(va)
         struct.pack_into("<I", out, off, new)
+    for off, (old, keys) in KEYS.items():
+        assert boot[off:off + 20].hex() == old and len(keys) == 10, hex(off)
+        struct.pack_into("<10H", out, off, *[key_code(ch) for ch in keys])
     shiritori_code.patch(out)  # Shiritori por letras: as tres funcoes de leitura
     return bytes(out)

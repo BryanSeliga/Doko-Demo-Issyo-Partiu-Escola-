@@ -2,7 +2,8 @@
 
 As traducoes ficam em traducao/*.jsonl, uma linha por texto: {"id": n, "pt": "..."}. O id e a posicao do texto
 na lista de extract_all.collect (a mesma ISO sempre gera a mesma lista). O texto japones nunca fica no repositorio.
-Cada texto traduzido e trocado em todos os scripts onde aparece, nas falas do codigo e no pool.
+Cada texto traduzido e trocado em todos os scripts onde aparece, nas falas do codigo e no pool. Uma linha com
+"so_em": ["NOME.KSC", ...] vale so nesses scripts, por cima da traducao geral (traducao/ajustes_por_script.jsonl).
 """
 import glob
 import json
@@ -19,9 +20,11 @@ from kscdis import table_values
 import boot_text
 import defplay
 import gui_render
+import selos
 import shiritori_code
 import textures
 import title_logo
+import xmb
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 # O op 4b copia a string do pool com strcpy para o buffer de fala do VM (+0x78, ate +0x477): mais que isso
@@ -42,9 +45,11 @@ def same_vars(row, jp):
 
 
 def load_translations(items):
-    """{texto_jp: texto_pt}; confere se as variaveis do original ficaram na traducao."""
+    """({texto_jp: texto_pt}, {script: {texto_jp: texto_pt}}); confere se as variaveis do original ficaram na
+    traducao. A segunda parte sao as linhas com "so_em": [scripts]: valem so nesses scripts, por cima da traducao
+    geral (o mesmo texto e leitura numa aula e palavra de vocabulario em outra)."""
     by_id = {it["id"]: it["jp"] for it in items}
-    out, bad = {}, []
+    out, only, bad = {}, {}, []
     for path in sorted(glob.glob(os.path.join(PT_DIR, "*.jsonl"))):
         for line in open(path, encoding="utf-8"):
             if not line.strip():
@@ -56,10 +61,14 @@ def load_translations(items):
                 continue
             if len(to_bytes(row["pt"])) > MAX_BYTES:
                 sys.exit(f"texto {row['id']} passa de {MAX_BYTES} bytes e travaria o jogo")
-            out[jp] = row["pt"]
+            if "so_em" in row:
+                for name in row["so_em"]:
+                    only.setdefault(name, {})[jp] = row["pt"]
+            else:
+                out[jp] = row["pt"]
     if bad:
         print("variaveis diferentes do original (ignorados):", bad[:20], "..." if len(bad) > 20 else "")
-    return out
+    return out, only
 
 
 # Rotina comum de todos os scripts que abre o teclado de nome: empilha a funcao 0x24, o tipo 3 (kana + ABC) e o
@@ -149,12 +158,14 @@ def apply(d, pt):
 def main(src, dst):
     iso = Iso(src)
     items = collect(iso)
-    pt = load_translations(items)
+    pt, only = load_translations(items)
+    names = {name for name, _, _ in ksc_files(iso)}
+    assert set(only) <= names, sorted(set(only) - names)
     top, total = {}, 0
     for name, off, size in ksc_files(iso):
-        d, ptk = iso.bp(off, size), pt
+        d, ptk = iso.bp(off, size), ({**pt, **only[name]} if name in only else pt)
         if name == SCHOOL_KSC:
-            d, ptk = school_name(d, pt)  # "Escola K" em vez de "KEscola"
+            d, ptk = school_name(d, ptk)  # "Escola K" em vez de "KEscola"
         new, n = apply(d, ptk)
         if new is not None:
             top[name] = new
@@ -168,12 +179,14 @@ def main(src, dst):
     # vocabulario inicial do Toro (palavras em portugues, leituras em kana)
     title["DEFPLAYDATA.BIN"] = defplay.rebuild(iso.bp(*tfiles["DEFPLAYDATA.BIN"]))
     bpm = {"TITLE.BPM": title}
-    # e texto desenhado no cenario (lanternas, placas, etiquetas, o bilhete do album)
-    for (pack, name), data in {**gui_render.build_all(iso, bpms), **textures.build_all(iso, bpms)}.items():
+    # e texto desenhado no cenario (lanternas, placas, etiquetas, o bilhete do album) e nos selos de avaliacao
+    images = {**gui_render.build_all(iso, bpms), **textures.build_all(iso, bpms), **selos.build_all(iso, bpms)}
+    for (pack, name), data in images.items():
         bpm.setdefault(pack, {})[name] = data
     print(f"{sum(len(v) for v in bpm.values())} imagens em {len(bpm)} pacotes")
     boot = boot_text.patch_boot(iso.read(BOOT_LBA, BOOT_SIZE))  # menus, botoes e janelas do sistema
-    print("DATA.BP ->", build(src, dst, top=top, bpm=bpm, boot=boot))
+    loose = xmb.build(iso)  # titulo, icone e painel do jogo no menu do PSP
+    print("DATA.BP ->", build(src, dst, top=top, bpm=bpm, boot=boot, loose=loose))
 
 
 if __name__ == "__main__":

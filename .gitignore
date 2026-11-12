@@ -15,3 +15,5 @@ BOOT.BIN
 EBOOT.BIN
 __pycache__/
 *.pyc
+# arte do painel do menu do PSP: feita sobre a foto do jogo
+art/menu/
